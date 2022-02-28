@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="azulEscuro">#08376B</color>
     <color name="cinza">#ECECEC</color>
+    <color name="corInput">#fafafa</color>
+    <color name="corTextoInput">#898989</color>
+    <color name="corBotaoCancelar">#ececec</color>
 </resources>
