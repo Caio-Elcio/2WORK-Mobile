@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,18 +12,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:layout_marginBottom="120dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:src="@drawable/capa"
-                />
-
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -38,25 +36,24 @@
                 android:backgroundTint="@color/azulEscuro"
                 android:text="Entrar"
                 android:textAllCaps="false"
-                />
+            />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="80dp"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_marginBottom="80dp">
 
             <Button
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:backgroundTint="@color/cinza"
-                android:text="Criar conta"
                 android:elevation="2dp"
-                android:textColor="@color/azulEscuro"
+                android:text="Criar conta"
                 android:textAllCaps="false"
-                />
-
+                android:textColor="@color/azulEscuro"
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -67,9 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/home"
-                />
+            />
         </LinearLayout>
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

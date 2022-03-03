@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -27,7 +25,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:src="@drawable/capa" />
+                android:src="@drawable/capa"
+            />
 
         </LinearLayout>
 
@@ -39,15 +38,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:text="Poste seu projeto"
+                android:text="Publique seu projeto!"
                 android:textColor="@color/black"
                 android:textSize="25dp"
-                android:textStyle="bold" />
-
+                android:textStyle="bold"
+            />
         </LinearLayout>
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -59,11 +57,11 @@
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
                 android:background="@drawable/custom_input"
-                android:hint="Título do projeto"
+                android:hint="Título"
                 android:inputType="text"
                 android:paddingLeft="15dp"
-                android:textSize="16dp" />
-
+                android:textSize="16dp"
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -82,12 +80,11 @@
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:paddingBottom="27dp"
-                android:textSize="16dp" />
-
+                android:textSize="16dp"
+            />
         </LinearLayout>
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -103,17 +100,15 @@
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:text=""
-                android:textSize="16dp" />
-
+                android:textSize="16dp"
+            />
         </LinearLayout>
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -122,15 +117,13 @@
                 android:layout_weight="30"
                 android:text="1. O projeto possui fins lucrativos?"
                 android:textColor="@color/black"
-                android:textSize="14dp" />
-
+                android:textSize="14dp"
+            />
         </LinearLayout>
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
 
             <RadioButton
                 android:id="@+id/radioButton1"
@@ -139,7 +132,8 @@
                 android:layout_marginLeft="46dp"
                 android:layout_marginTop="2dp"
                 android:layout_weight="0"
-                android:text="Sim" />
+                android:text="Sim"
+            />
 
             <RadioButton
                 android:id="@+id/radioButton2"
@@ -148,33 +142,28 @@
                 android:layout_marginLeft="46dp"
                 android:layout_marginTop="2dp"
                 android:layout_weight="0"
-                android:text="Não" />
-
-
+                android:text="Não"
+            />
         </LinearLayout>
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="30"
-                android:layout_marginTop="5dp"
                 android:text="2. O projeto é patenteado?"
                 android:textColor="@color/black"
-                android:textSize="14dp" />
-
-
+                android:textSize="14dp"
+            />
         </LinearLayout>
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -185,7 +174,8 @@
                 android:layout_marginLeft="46dp"
                 android:layout_marginTop="2dp"
                 android:layout_weight="0"
-                android:text="Sim" />
+                android:text="Sim"
+            />
 
             <RadioButton
                 android:id="@+id/radioButton4"
@@ -194,31 +184,28 @@
                 android:layout_marginLeft="46dp"
                 android:layout_marginTop="2dp"
                 android:layout_weight="0"
-                android:text="Não" />
-
+                android:text="Não"
+            />
         </LinearLayout>
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="50dp"
                 android:layout_weight="30"
                 android:text="3. Existe uma expectativa de mercado?"
                 android:textColor="@color/black"
-                android:textSize="14dp" />
-
+                android:textSize="14dp"
+            />
         </LinearLayout>
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -229,7 +216,8 @@
                 android:layout_marginLeft="46dp"
                 android:layout_marginTop="2dp"
                 android:layout_weight="0"
-                android:text="Sim" />
+                android:text="Sim"
+            />
 
             <RadioButton
                 android:id="@+id/radioButton6"
@@ -238,10 +226,9 @@
                 android:layout_marginLeft="46dp"
                 android:layout_marginTop="2dp"
                 android:layout_weight="0"
-                android:text="Não" />
-
+                android:text="Não"
+            />
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -251,12 +238,13 @@
             <Button
                 android:layout_width="170dp"
                 android:layout_height="50dp"
-                android:layout_marginRight="5dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginRight="5dp"
                 android:backgroundTint="@color/azulEscuro"
                 android:text="Realizar upload"
                 android:textAllCaps="false"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+            />
 
             <Button
                 android:layout_width="130dp"
@@ -267,16 +255,13 @@
                 android:text="Cancelar"
                 android:textAllCaps="false"
                 android:textColor="@color/azulEscuro"
-                android:textStyle="bold" />
-
+                android:textStyle="bold"
+            />
         </LinearLayout>
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-
+            android:layout_height="match_parent"
+        />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
