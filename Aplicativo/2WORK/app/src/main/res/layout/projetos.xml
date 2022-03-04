@@ -25,8 +25,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:src="@drawable/capa"
-            />
+                android:src="@drawable/capa" />
         </LinearLayout>
 
         <LinearLayout
@@ -38,12 +37,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"
-                android:text="2WORK é o principal destino para encontrar e exibir trabalhos
-                criativos e abriga os melhores profissionais de desenvolvimento do mundo."
+                android:layout_marginBottom="3dp"
+                android:justificationMode="inter_word"
+                android:text="2WORK, destino ideal para encontrar e exibir trabalhos e projetos criativos, abriga os melhores profissionais de desenvolvimento do mundo."
                 android:textColor="@color/black"
-                android:textSize="19dp"
-            />
+                android:textSize="19dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -54,15 +52,15 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginBottom="9dp"
                 android:layout_weight="1"
                 android:background="@drawable/custom_input"
                 android:hint="Pesquise o mundo criativo"
                 android:inputType="textUri"
                 android:paddingLeft="15dp"
-                android:textSize="18dp"
-            />
+                android:textSize="18dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -72,14 +70,14 @@
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="90dp"
-                android:src="@drawable/capa"
-            />
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/img_two" />
 
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="90dp"
-                android:src="@drawable/capa"
-            />
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/img_three" />
         </LinearLayout>
 
         <LinearLayout
@@ -90,24 +88,24 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginBottom="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/custom_input"
                 android:paddingLeft="15dp"
                 android:text="Magic World ❤ 5"
-                android:textSize="16dp"
-            />
+                android:textSize="16dp" />
 
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginBottom="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/custom_input"
                 android:paddingLeft="15dp"
                 android:text="BioTec ❤ 10"
-                android:textSize="16dp"
-            />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -117,14 +115,14 @@
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="90dp"
-                android:src="@drawable/capa"
-            />
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/img_three" />
 
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="90dp"
-                android:src="@drawable/capa"
-            />
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/img_two" />
         </LinearLayout>
 
         <LinearLayout
@@ -135,24 +133,24 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginBottom="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/custom_input"
                 android:paddingLeft="15dp"
                 android:text="TecX ❤ 15"
-                android:textSize="16dp"
-            />
+                android:textSize="16dp" />
 
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginBottom="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/custom_input"
                 android:paddingLeft="15dp"
                 android:text="UX/UI Tesla ❤ 20"
-                android:textSize="16dp"
-            />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -162,14 +160,12 @@
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="90dp"
-                android:src="@drawable/capa"
-            />
+                android:src="@drawable/img_two" />
 
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="90dp"
-                android:src="@drawable/capa"
-            />
+                android:src="@drawable/img_three" />
         </LinearLayout>
 
         <LinearLayout
@@ -184,8 +180,7 @@
                 android:background="@drawable/custom_input"
                 android:paddingLeft="15dp"
                 android:text="MoneyFX ❤ 25"
-                android:textSize="16dp"
-            />
+                android:textSize="16dp" />
 
             <EditText
                 android:layout_width="0dp"
@@ -196,8 +191,7 @@
                 android:background="@drawable/custom_input"
                 android:paddingLeft="15dp"
                 android:text="CriptoFX ❤ 30"
-                android:textSize="16dp"
-            />
+                android:textSize="16dp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
