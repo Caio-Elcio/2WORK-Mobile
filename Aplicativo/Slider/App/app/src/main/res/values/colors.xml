@@ -7,9 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="azulEscuro">#08376B</color>
-    <color name="cinza">#ECECEC</color>
-    <color name="corInput">#fafafa</color>
-    <color name="corTextoInput">#898989</color>
-    <color name="corBotaoCancelar">#ececec</color>
+    <color name="grey">#888888</color>
+    <color name="primary_blue">#0000FF</color>
 </resources>
