@@ -12,4 +12,5 @@
     <color name="corInput">#fafafa</color>
     <color name="corTextoInput">#898989</color>
     <color name="corBotaoCancelar">#ececec</color>
+    <color name="corFundoInput">#F1F1F2</color>
 </resources>
