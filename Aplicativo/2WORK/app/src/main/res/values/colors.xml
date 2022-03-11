@@ -13,4 +13,5 @@
     <color name="corTextoInput">#898989</color>
     <color name="corBotaoCancelar">#ececec</color>
     <color name="corFundoInput">#F1F1F2</color>
+    <color name="corButtonVerProjetos">#297C1B</color>
 </resources>

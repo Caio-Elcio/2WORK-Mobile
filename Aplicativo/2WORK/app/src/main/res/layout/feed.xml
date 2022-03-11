@@ -3,84 +3,373 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:src="@drawable/capa"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Faça o upload de seu Projeto!"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:textColor="@color/black">
-            </TextView>
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="O painel do projeto é um recurso exclusivo para contratos de trabalho. É perfeito para freelancers, agências e moonlighters na 2WORK!"
-                android:textSize="20dp"
-                android:textColor="@color/black"
-                android:justificationMode="inter_word">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:src="@drawable/capa" />
 
-            </TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:orientation="vertical"
-            android:gravity="center">
+            </LinearLayout>
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:src="@drawable/ic_undraw_code_thinking_re_gka2_1"
-                android:layout_height="150dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
-
-            <Button
+                android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
-                android:layout_width="320dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/azulEscuro"
-                android:text="Crie um projeto gratis!"
-                android:textAllCaps="false"
-                />
-        </LinearLayout>
+                android:gravity="center"
+                android:orientation="vertical">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Faça o upload de seu Projeto!"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:justificationMode="inter_word"
+                    android:text="O painel do projeto é um recurso exclusivo para contratos de trabalho. É perfeito para freelancers, agências e moonlighters na 2WORK!"
+                    android:textColor="@color/black"
+                    android:textSize="20dp">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_undraw_code_thinking_re_gka2_1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="60dp"
+                    android:backgroundTint="@color/azulEscuro"
+                    android:text="Crie um projeto gratis!"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Projetos Recentes!"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:justificationMode="inter_word"
+                    android:text="03 novos projetos adicionados"
+                    android:textColor="@color/black"
+                    android:textSize="15dp">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/azulEscuro"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start">
+
+                        <TextView
+                            android:layout_width="170dp"
+                            android:layout_height="35dp"
+                            android:drawableStart="@drawable/ic_iconusuariov"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:hint="Vinicius Novais"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:hint="Postado há 55 segundos..."
+                            android:textColor="@color/black"
+                            android:textSize="7dp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:justificationMode="inter_word"
+                        android:text="O painel do projeto é um recurso exclusivo para contratos de trabalho. É perfeito para freelancers, agências e moonlighters na 2WORK!"
+                        android:textColor="@color/black"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/corButtonVerProjetos"
+                            android:text="Ver Projeto"
+                            android:textAllCaps="false" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/azulEscuro"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start">
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="35dp"
+                            android:drawableStart="@drawable/ic_iconusuarioc"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:hint="Caio Elcio"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:hint="Postado há 55 segundos..."
+                            android:textColor="@color/black"
+                            android:textSize="7dp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:justificationMode="inter_word"
+                        android:text="O painel do projeto é um recurso exclusivo para contratos de trabalho. É perfeito para freelancers, agências e moonlighters na 2WORK!"
+                        android:textColor="@color/black"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/corButtonVerProjetos"
+                            android:text="Ver Projeto"
+                            android:textAllCaps="false" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/azulEscuro"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start">
+
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="35dp"
+                            android:drawableStart="@drawable/ic_iconusuariol"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:hint="Lucas Felix"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:hint="Postado há 55 segundos..."
+                            android:textColor="@color/black"
+                            android:textSize="7dp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:justificationMode="inter_word"
+                        android:text="O painel do projeto é um recurso exclusivo para contratos de trabalho. É perfeito para freelancers, agências e moonlighters na 2WORK!"
+                        android:textColor="@color/black"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/corButtonVerProjetos"
+                            android:text="Ver Projeto"
+                            android:textAllCaps="false" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/azulEscuro"></LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
