@@ -99,8 +99,7 @@
                 android:inputType="text"
                 android:text="Entrar"
                 android:textColor="@color/white"
-                android:textSize="15dp"
-            />
+                android:textSize="15dp" />
 
             <TextView
                 android:layout_width="0dp"
