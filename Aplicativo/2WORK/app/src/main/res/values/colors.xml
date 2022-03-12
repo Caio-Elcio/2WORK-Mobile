@@ -14,4 +14,8 @@
     <color name="corBotaoCancelar">#ececec</color>
     <color name="corFundoInput">#F1F1F2</color>
     <color name="corButtonVerProjetos">#297C1B</color>
+    <color name="blue">#08376B</color>
+    <color name="grey">#CECECE</color>
+    <color name="strong_grey">#515151</color>
+    <color name="gold">#FFD66B</color>
 </resources>
