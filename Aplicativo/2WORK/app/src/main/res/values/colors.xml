@@ -18,4 +18,6 @@
     <color name="grey">#CECECE</color>
     <color name="strong_grey">#515151</color>
     <color name="gold">#FFD66B</color>
+    <color name="primary_blue">#08376B</color>
+
 </resources>

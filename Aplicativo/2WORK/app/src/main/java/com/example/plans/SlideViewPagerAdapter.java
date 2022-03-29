@@ -1,4 +1,4 @@
-package com.example.a2work.plans
+package com.example.plans;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.example.a2work.MainActivity;
+import com.example.a2work.R;
 
 public class SlideViewPagerAdapter extends PagerAdapter {
 
@@ -57,7 +60,7 @@ public class SlideViewPagerAdapter extends PagerAdapter {
         btnIniciar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ctx,MainActivity.class);
+                Intent intent = new Intent(ctx, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
                 ctx.startActivity(intent);
             }
