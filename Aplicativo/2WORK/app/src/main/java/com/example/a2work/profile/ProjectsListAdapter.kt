@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a2work.R
 import com.example.a2work.data.profile.Project
-import kotlinx.android.synthetic.main.fragment_profile.view.*
+import kotlinx.android.synthetic.main.activity_profile.view.*
 import kotlinx.android.synthetic.main.layout_item_my_projects.view.*
 
 class ProjectsListAdapter(private val projects : List<Project>,

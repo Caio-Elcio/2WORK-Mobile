@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingBottom="15dp">
+
+
+                <Button
+                    android:layout_width="125dp"
+                    android:layout_height="35dp"
+                    android:text="Editar Perfil"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="26dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_button_radius"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnSair"
+                    android:layout_width="125dp"
+                    android:layout_height="35dp"
+                    android:text="Sair"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="26dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_button_stroke"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/circle"
+                    android:layout_width="210dp"
+                    android:layout_height="210dp"
+                    android:background="@drawable/custom_stroke_circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnSair"
+                    android:layout_marginTop="10dp" >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/casimiro"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_nome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Casimiro"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_plano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business"
+                    android:textSize="24sp"
+                    android:textColor="@color/gold"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/tv_nome"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/coroa"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nome"
+                    app:layout_constraintEnd_toStartOf="@id/tv_plano"
+                    android:layout_marginTop="8dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_infos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layout_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp">
+
+
+                <TextView
+                    android:id="@+id/nome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome:"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp" />
+                <TextView
+                    android:id="@+id/nome_escrito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Casimiro Miguel Vieira da Silva"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/strong_grey"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/nome"
+                    android:layout_marginStart="10dp" />
+                <TextView
+                    android:id="@+id/telefone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telefone:"
+                    app:layout_constraintTop_toBottomOf="@id/nome_escrito"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/telefone_escrito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="(11) 97827-7282"
+                    android:textColor="@color/strong_grey"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/telefone"
+                    app:layout_constraintTop_toBottomOf="@id/nome_escrito" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    app:layout_constraintTop_toBottomOf="@id/telefone_escrito"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:id="@+id/email_escrito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="reidoentretenimento@gmail.com"
+                    app:layout_constraintTop_toBottomOf="@id/telefone_escrito"
+                    android:textColor="@color/strong_grey"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/email"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_icons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layout_infos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:id="@+id/imagem_favoritos"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/pin"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Favoritos:"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/layout"
+                        android:textColor="@color/strong_grey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textSize="25sp"
+                        app:layout_constraintTop_toBottomOf="@id/layout"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/branding"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:layout_marginTop="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recomendação:"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/layout"
+                        android:textColor="@color/strong_grey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.3"
+                        android:textAlignment="center"
+                        android:textSize="25sp"
+                        app:layout_constraintTop_toBottomOf="@id/layout"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/gerenciamento" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meus projetos:"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/layout"
+                        android:textColor="@color/strong_grey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textSize="25sp"
+                        app:layout_constraintTop_toBottomOf="@id/layout"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layout_icons"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_my_projects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Meus Projetos"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="30dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_projects"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    tools:listitem="@layout/layout_item_my_projects"
+                    tools:itemCount="1"
+                    android:orientation="horizontal"/>
+
+
+                <TextView
+                    android:id="@+id/tv_liked_projects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:textSize="22sp"
+                    android:text="Projetos Curtidos"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_list"
+                    android:layout_marginStart="30dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/liked_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_liked_projects"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    tools:listitem="@layout/layout_item_liked_projects"
+                    tools:itemCount="0"
+                    android:orientation="horizontal"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/layout_shadow_menu"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemHorizontalTranslationEnabled="false"
+        app:labelVisibilityMode="labeled" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
