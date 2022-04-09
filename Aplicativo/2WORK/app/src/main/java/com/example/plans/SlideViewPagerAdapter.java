@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
@@ -31,65 +30,58 @@ public class SlideViewPagerAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view==object;
+        return view == object;
     }
 
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
-        LayoutInflater layoutInflater= (LayoutInflater) ctx.getSystemService(ctx.LAYOUT_INFLATER_SERVICE);
-        View view=layoutInflater.inflate(R.layout.slide_screen,container,false);
+        LayoutInflater layoutInflater = (LayoutInflater) ctx.getSystemService(ctx.LAYOUT_INFLATER_SERVICE);
+        View view = layoutInflater.inflate(R.layout.slide_screen, container, false);
 
-        ImageView logo=view.findViewById(R.id.logo);
+        ImageView logo = view.findViewById(R.id.logo);
+        ImageView ind1 = view.findViewById(R.id.ind1);
+        ImageView ind2 = view.findViewById(R.id.ind2);
+        ImageView ind3 = view.findViewById(R.id.ind3);
 
+        TextView desc2 = view.findViewById(R.id.tv_desc2);
+        TextView texto = view.findViewById(R.id.tv_contra);
+        TextView desc = view.findViewById(R.id.tv_desc);
+        TextView desc3 = view.findViewById(R.id.tv_desc3);
+        TextView desc4 = view.findViewById(R.id.tv_desc4);
 
-        ImageView ind1=view.findViewById(R.id.ind1);
-        ImageView ind2=view.findViewById(R.id.ind2);
-        ImageView ind3=view.findViewById(R.id.ind3);
-
-        TextView desc2=view.findViewById(R.id.tv_desc2);
-        TextView texto=view.findViewById(R.id.tv_contra);
-        TextView desc=view.findViewById(R.id.tv_desc);
-        TextView desc3=view.findViewById(R.id.tv_desc3);
-        TextView desc4=view.findViewById(R.id.tv_desc4);
-
-        ImageView next=view.findViewById(R.id.proximo);
-        ImageView back=view.findViewById(R.id.anterior);
-        Button btnIniciar=view.findViewById(R.id.btn_contratar);
-        btnIniciar.setOnClickListener(new View.OnClickListener(){
+        ImageView next = view.findViewById(R.id.proximo);
+        ImageView back = view.findViewById(R.id.anterior);
+        Button btnIniciar = view.findViewById(R.id.btn_contratar);
+        btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ctx, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 ctx.startActivity(intent);
             }
         });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                SlideActivity.viewPager.setCurrentItem(position+1);
-
+                SlideActivity.viewPager.setCurrentItem(position + 1);
             }
         });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                SlideActivity.viewPager.setCurrentItem(position-1);
-
+                SlideActivity.viewPager.setCurrentItem(position - 1);
             }
         });
 
-        switch (position){
+        switch (position) {
             case 0:
                 logo.setImageResource(R.drawable.primeiro);
                 ind1.setImageResource(R.drawable.selected);
                 ind2.setImageResource(R.drawable.unselected);
                 ind3.setImageResource(R.drawable.unselected);
-
                 texto.setText("Plano Basic");
 //                desc.setText("Contratado");
                 back.setVisibility(View.GONE);
@@ -128,10 +120,8 @@ public class SlideViewPagerAdapter extends PagerAdapter {
                 next.setVisibility(View.GONE);
                 break;
         }
-
         container.addView(view);
         return view;
-
     }
 
     @Override

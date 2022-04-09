@@ -18,8 +18,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="221dp"
-                android:src="@drawable/fundocadastro"
-                />
+                android:src="@drawable/fundocadastro" />
         </LinearLayout>
 
         <LinearLayout
@@ -33,8 +32,7 @@
                 android:text="Cadastro"
                 android:textColor="@color/black"
                 android:textSize="25dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -50,8 +48,7 @@
                 android:layout_weight="1"
                 android:hint="Nome"
                 android:inputType="text"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,8 +63,7 @@
                 android:layout_weight="1"
                 android:hint="Data nasc"
                 android:inputType="date"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
 
             <EditText
                 android:layout_width="0dp"
@@ -77,8 +73,7 @@
                 android:layout_weight="1"
                 android:hint="CPF"
                 android:inputType="number"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -93,8 +88,7 @@
                 android:layout_weight="3"
                 android:hint="Cidade"
                 android:inputType="text"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
 
             <EditText
                 android:layout_width="0dp"
@@ -104,8 +98,7 @@
                 android:layout_weight="1"
                 android:hint="UF"
                 android:inputType="text"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -121,8 +114,7 @@
                 android:layout_weight="1"
                 android:hint="Telefone"
                 android:inputType="number"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -138,8 +130,7 @@
                 android:layout_weight="1"
                 android:hint="Email"
                 android:inputType="text"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -154,8 +145,7 @@
                 android:layout_weight="1"
                 android:hint="Senha"
                 android:inputType="text"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
 
             <EditText
                 android:layout_width="0dp"
@@ -165,8 +155,21 @@
                 android:layout_weight="1"
                 android:hint="Confirmar senha"
                 android:inputType="text"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="46dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                android:text="Eu concordo com todos os Termos, Política de Privacidade e Taxas." />
         </LinearLayout>
 
         <LinearLayout
@@ -177,15 +180,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="30dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/azulEscuro"
+                android:backgroundTint="@color/btn_cinza"
                 android:inputType="text"
                 android:text="Cadastrar"
                 android:textColor="@color/white"
-                android:textSize="15dp"
-                />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -196,25 +197,21 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="20dp"
                 android:layout_weight="2"
                 android:hint="Ainda não possui uma conta ?"
                 android:inputType="text"
                 android:textColor="@color/white"
-                android:textSize="13dp"
-                />
+                android:textSize="13dp" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
                 android:text="Fazer Login"
                 android:textColor="@color/azulEscuro"
                 android:textSize="15dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

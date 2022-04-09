@@ -13,7 +13,7 @@ class ProfileActivity : AppCompatActivity() {
         navigationMenu()
     }
 
-    fun navigationMenu(){
+    fun navigationMenu() {
         project_bottom_navigation?.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navi_home -> {
@@ -38,5 +38,5 @@ class ProfileActivity : AppCompatActivity() {
             }
             true
         }
-}
+    }
 }

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProjetosActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -30,8 +31,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
-                    android:src="@drawable/capa"
-                    />
+                    android:src="@drawable/capa" />
             </LinearLayout>
 
             <LinearLayout
@@ -47,32 +47,30 @@
                     android:justificationMode="inter_word"
                     android:text="2WORK é o principal destino para encontrar e exibir trabalhos criativos e abriga os melhores profissionais de desenvolvimento do mundo."
                     android:textColor="@color/black"
-                    android:textSize="13dp"
-                    />
+                    android:textSize="13dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginBottom="40dp"
+                android:gravity="center">
 
                 <EditText
-                    android:backgroundTint="@color/corFundoInput"
                     android:layout_width="match_parent"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
-                    android:layout_height="40dp"
                     android:layout_weight="0"
                     android:background="@drawable/custom_input"
+                    android:backgroundTint="@color/corFundoInput"
                     android:drawableStart="@drawable/ic_search_icon"
-                    android:hint="Pesquise o mundo criativo"
                     android:drawablePadding="15dp"
+                    android:hint="Pesquise o mundo criativo"
                     android:inputType="textUri"
                     android:paddingLeft="15dp"
-                    android:textSize="15dp"
-                    />
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -83,156 +81,15 @@
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="100dp"
-                    android:src="@drawable/empresa_um"
-                    />
+                    android:layout_weight="1"
+                    android:src="@drawable/empresa_um" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:src="@drawable/empresa_dois"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="30dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_weight="1"
-                    android:height="20dp"
-                    android:text="Magic World      🖤 10"
-                    android:textSize="13dp" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="40dp"
-                    android:layout_weight="1"
-                    android:text="BioTec                🖤 5"
-                    android:textSize="13dp"
-
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="100dp"
-                    android:src="@drawable/empresa_tres"
-                    />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/empresa_quatro"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="30dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_weight="1"
-                    android:height="20dp"
-                    android:text="Magic World      🖤 10"
-                    android:textSize="13dp" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="40dp"
-                    android:layout_weight="1"
-                    android:text="BioTec                🖤 5"
-                    android:textSize="13dp"
-
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="100dp"
-                    android:src="@drawable/empresa_seis"
-                    />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/empresa_sete"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="30dp"
-                >
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_weight="1"
-                    android:height="20dp"
-                    android:text="Magic World      🖤 10"
-                    android:textSize="13dp" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="40dp"
-                    android:layout_weight="1"
-                    android:text="BioTec                🖤 5"
-                    android:textSize="13dp"
-
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="100dp"
-                    android:src="@drawable/empresa_cinco"
-                    />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/empresa_nove"
-                    />
+                    android:src="@drawable/empresa_dois" />
             </LinearLayout>
 
             <LinearLayout
@@ -269,25 +126,22 @@
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="100dp"
-                    android:src="@drawable/empresa_oito"
-                    />
+                    android:layout_weight="1"
+                    android:src="@drawable/empresa_tres" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:src="@drawable/empresa_onze"
-                    />
+                    android:src="@drawable/empresa_quatro" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
-                android:layout_marginBottom="30dp"
-                >
+                android:layout_marginBottom="30dp">
 
                 <TextView
                     android:layout_width="0dp"
@@ -308,6 +162,7 @@
 
                     />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -316,17 +171,150 @@
 
                 <ImageView
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="100dp"
-                    android:src="@drawable/empresa_doze"
-                    />
+                    android:layout_weight="1"
+                    android:src="@drawable/empresa_seis" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:src="@drawable/empresa_dez"
+                    android:src="@drawable/empresa_sete" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="1"
+                    android:height="20dp"
+                    android:text="Magic World      🖤 10"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="1"
+                    android:text="BioTec                🖤 5"
+                    android:textSize="13dp"
+
                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/empresa_cinco" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/empresa_nove" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="1"
+                    android:height="20dp"
+                    android:text="Magic World      🖤 10"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="1"
+                    android:text="BioTec                🖤 5"
+                    android:textSize="13dp"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/empresa_oito" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/empresa_onze" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="1"
+                    android:height="20dp"
+                    android:text="Magic World      🖤 10"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="1"
+                    android:text="BioTec                🖤 5"
+                    android:textSize="13dp"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/empresa_doze" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/empresa_dez" />
             </LinearLayout>
 
             <LinearLayout
@@ -362,11 +350,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/layout_shadow_menu"
-        app:menu="@menu/bottom_navigation_menu"
-        app:itemTextColor="@color/black"
-        app:itemIconTint="@color/blue"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:itemHorizontalTranslationEnabled="false"
-        app:labelVisibilityMode="labeled" />
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

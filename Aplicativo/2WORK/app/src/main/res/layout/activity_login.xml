@@ -18,8 +18,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="262dp"
-                android:src="@drawable/fundologin"
-                />
+                android:src="@drawable/fundologin" />
         </LinearLayout>
 
         <LinearLayout
@@ -34,8 +33,7 @@
                 android:text="Entrar"
                 android:textColor="@color/black"
                 android:textSize="25dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,8 +47,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Bem vindo de volta"
                 android:textColor="@color/black"
-                android:textSize="18dp"
-                />
+                android:textSize="18dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,8 +63,7 @@
                 android:layout_weight="1"
                 android:hint="Email"
                 android:inputType="text"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -83,8 +79,7 @@
                 android:layout_weight="1"
                 android:hint="Senha"
                 android:inputType="text"
-                android:textSize="16dp"
-                />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -113,8 +108,7 @@
                 android:layout_weight="1"
                 android:hint="Esqueceu a senha ?"
                 android:inputType="text"
-                android:textSize="14dp"
-                />
+                android:textSize="14dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -131,8 +125,7 @@
                 android:hint="Ainda não possui uma conta ?"
                 android:inputType="text"
                 android:textColor="@color/white"
-                android:textSize="13dp"
-                />
+                android:textSize="13dp" />
 
             <TextView
                 android:layout_width="0dp"
@@ -144,8 +137,7 @@
                 android:text="Registre-se"
                 android:textColor="@color/azulEscuro"
                 android:textSize="15dp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

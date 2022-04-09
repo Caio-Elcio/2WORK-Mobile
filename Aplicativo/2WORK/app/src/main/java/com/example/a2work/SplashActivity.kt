@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 
 class SplashActivity : AppCompatActivity() {
+
     private lateinit var fullscreenContent: ImageView
     private lateinit var fullscreenContentControls: LinearLayout
     private val hideHandler = Handler()
@@ -24,51 +25,39 @@ class SplashActivity : AppCompatActivity() {
                     View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
                     View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         delayedShow(5000)
-
     }
     private val showPart2Runnable = Runnable {
         val intent = Intent(this, ProfileActivity::class.java)
         startActivity(intent)
         supportActionBar?.show()
     }
+
     private var isFullscreen: Boolean = false
-
     private val showRunnable = Runnable { show() }
-
     private val hideRunnable = Runnable { hide() }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_splash)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         isFullscreen = true
-
         fullscreenContent = findViewById(R.id.animationView)
-
-
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
-
         delayedHide(100)
     }
-
 
     private fun hide() {
         hideHandler.removeCallbacks(showPart2Runnable)
         hideHandler.postDelayed(hidePart2Runnable, UI_ANIMATION_DELAY.toLong())
-
     }
 
     private fun show() {
         fullscreenContent.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
                     View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-
         // Schedule a runnable to display UI elements after a delay
         hideHandler.removeCallbacks(hidePart2Runnable)
         hideHandler.postDelayed(showPart2Runnable, UI_ANIMATION_DELAY.toLong())
