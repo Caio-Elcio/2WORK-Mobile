@@ -346,7 +346,7 @@
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/project_bottom_navigation"
+        android:id="@+id/bottom_navigation_projetos"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/layout_shadow_menu"

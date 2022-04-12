@@ -3,6 +3,7 @@ package com.example.a2work
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_feed.*
 import kotlinx.android.synthetic.main.activity_projetos.*
 
 class UpdateProfileActivity : AppCompatActivity() {
@@ -13,7 +14,7 @@ class UpdateProfileActivity : AppCompatActivity() {
     }
 
     fun navigationMenu() {
-        project_bottom_navigation.setOnNavigationItemSelectedListener { item ->
+        bottom_navigation_home.setOnNavigationItemSelectedListener { item ->
             when (item.getItemId()) {
                 R.id.navi_home -> {
                     val i = Intent(this, HomeActivity::class.java)

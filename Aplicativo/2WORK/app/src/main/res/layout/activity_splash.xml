@@ -33,7 +33,7 @@
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:src="@drawable/logobranca" />
+                android:src="@drawable/ic_home" />
         </LinearLayout>
 
         <LinearLayout

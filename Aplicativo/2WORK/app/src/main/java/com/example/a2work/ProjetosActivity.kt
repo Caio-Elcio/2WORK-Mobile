@@ -3,37 +3,30 @@ package com.example.a2work
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.plans.SlideActivity
+import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_projetos.*
 
 class ProjetosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_projetos)
-        navigationMenu()
-    }
 
-    fun navigationMenu() {
-        project_bottom_navigation.setOnNavigationItemSelectedListener { item ->
-            when (item.getItemId()) {
+        bottom_navigation_projetos.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId) {
                 R.id.navi_home -> {
-                    val i = Intent(this, HomeActivity::class.java)
-                    startActivity(i)
+                    startActivity(Intent(this, FeedActivity::class.java))
                 }
                 R.id.navi_upload -> {
-                    val i = Intent(this, UploadActivity::class.java)
-                    startActivity(i)
+                    startActivity(Intent(this, UploadActivity::class.java))
                 }
                 R.id.navi_projeto -> {
-                    val i = Intent(this, ProjetosActivity::class.java)
-                    startActivity(i)
                 }
                 R.id.navi_conta -> {
-                    val i = Intent(this, ProfileActivity::class.java)
-                    startActivity(i)
+                    startActivity(Intent(this, ProfileActivity::class.java))
                 }
                 R.id.navi_planos -> {
-                    val i = Intent(this, ProfileActivity::class.java)
-                    startActivity(i)
+                    startActivity(Intent(this, SlideActivity::class.java))
                 }
             }
             true
