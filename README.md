@@ -23,7 +23,7 @@ Somos uma empresa que acreditamos poder ajudar desenvolvedores a expor seus proj
 ![Features](https://user-images.githubusercontent.com/70399485/138110029-4c42f799-87d9-41f0-b2c3-002f034d4b7a.gif)
 
 ## Conheça nossa equipe! 🥰 
-![Equipe](https://user-images.githubusercontent.com/70399485/134790137-518d1034-b7c3-485e-947c-43f37606cf06.png)
+![Equipe](https://github.com/Caio-Elcio/2WORK-Mobile/raw/main/integrantes.gif)
 
 ### Nosso Whitepaper: https://2work.gitbook.io/artigo-2work/
 
