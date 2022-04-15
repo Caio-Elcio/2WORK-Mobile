@@ -3,6 +3,7 @@ package com.example.a2work
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.plans.SlideActivity
 import kotlinx.android.synthetic.main.activity_feed.*
 
@@ -30,4 +31,9 @@ class FeedActivity : AppCompatActivity() {
                 true
             }
     }
+
+    fun upload(view: View){
+        startActivity(Intent(baseContext, UploadActivity::class.java))
+    }
+
 }

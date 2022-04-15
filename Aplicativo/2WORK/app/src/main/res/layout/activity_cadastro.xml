@@ -184,6 +184,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/btn_cinza"
                 android:inputType="text"
+                android:onClick="cadastro"
                 android:text="Cadastrar"
                 android:textColor="@color/white"
                 android:textSize="15dp" />

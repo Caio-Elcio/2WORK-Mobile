@@ -3,41 +3,38 @@ package com.example.a2work
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_feed.*
-import kotlinx.android.synthetic.main.activity_projetos.*
+import android.view.View
+import com.example.a2work.profile.SlideActivity
+import kotlinx.android.synthetic.main.activity_profile.*
 
 class UpdateProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_profile)
-        navigationMenu()
-    }
 
-    fun navigationMenu() {
-        bottom_navigation_home.setOnNavigationItemSelectedListener { item ->
-            when (item.getItemId()) {
+        bottom_navigation_perfil.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
                 R.id.navi_home -> {
-                    val i = Intent(this, HomeActivity::class.java)
-                    startActivity(i)
+                    startActivity(Intent(this, FeedActivity::class.java))
                 }
                 R.id.navi_upload -> {
-                    val i = Intent(this, UploadActivity::class.java)
-                    startActivity(i)
+                    startActivity(Intent(this, UploadActivity::class.java))
                 }
                 R.id.navi_projeto -> {
-                    val i = Intent(this, ProjetosActivity::class.java)
-                    startActivity(i)
+                    startActivity(Intent(this, ProjetosActivity::class.java))
                 }
                 R.id.navi_conta -> {
-                    val i = Intent(this, ProfileActivity::class.java)
-                    startActivity(i)
                 }
                 R.id.navi_planos -> {
-                    val i = Intent(this, ProfileActivity::class.java)
-                    startActivity(i)
+                    startActivity(Intent(this, SlideActivity::class.java))
                 }
             }
             true
         }
+
+        fun voltar(view: View){
+            startActivity(Intent(baseContext, ProfileActivity::class.java))
+        }
+
     }
 }
