@@ -156,7 +156,7 @@
                 android:layout_marginBottom="25dp"
                 android:background="@drawable/custom_button_radius"
                 android:backgroundTint="@color/blue"
-                android:text="Editar Perfil"
+                android:text="Salvar"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
                 android:textSize="14sp"
