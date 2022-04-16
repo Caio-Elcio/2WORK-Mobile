@@ -19,6 +19,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".profile.SlideActivity"
+            android:exported="true" />
+        <activity
             android:name=".UpdateProfileActivity"
             android:exported="true" />
         <activity

@@ -1,4 +1,6 @@
-package com.example.plans;
+package com.example.a2work.profile;
+
+import static com.example.a2work.R.layout.slide_screen;
 
 import android.content.Context;
 import android.content.Intent;
@@ -38,7 +40,7 @@ public class SlideViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
         LayoutInflater layoutInflater = (LayoutInflater) ctx.getSystemService(ctx.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.slide_screen, container, false);
+        View view = layoutInflater.inflate(slide_screen, container, false);
 
         ImageView logo = view.findViewById(R.id.logo);
         ImageView ind1 = view.findViewById(R.id.ind1);
@@ -54,6 +56,8 @@ public class SlideViewPagerAdapter extends PagerAdapter {
         ImageView next = view.findViewById(R.id.proximo);
         ImageView back = view.findViewById(R.id.anterior);
         Button btnIniciar = view.findViewById(R.id.btn_contratar);
+
+        TextView titulo = view.findViewById(R.id.titulo);
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +69,7 @@ public class SlideViewPagerAdapter extends PagerAdapter {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SlideActivity.viewPager.setCurrentItem(position + 1);
+                com.example.a2work.profile.SlideActivity.viewPager.setCurrentItem(position + 1);
             }
         });
 
@@ -100,6 +104,7 @@ public class SlideViewPagerAdapter extends PagerAdapter {
                 desc.setText("1 - Recomendado para projetos independentes");
                 desc2.setText("2 - Upload de até 3 projetos no mês");
                 desc3.setText("3 - Visualizar todos os projetos na plataforma");
+                titulo.setText("PRO");
                 back.setVisibility(View.VISIBLE);
                 next.setVisibility(View.VISIBLE);
                 break;
@@ -112,10 +117,11 @@ public class SlideViewPagerAdapter extends PagerAdapter {
 
                 desc2.setText("2 - Recomendado para empresas");
                 desc3.setText("3 - Upload de 5 projetos no mês");
-                texto.setText("Plano Busines");
+                texto.setText("Plano PREMIUM");
                 desc.setText("1 - Economia de 130.00 (Anual)");
                 desc4.setText("4 - Visualizar todos os projetos na plataforma");
                 btnIniciar.setText("Assinar");
+                titulo.setText("PREMIUM");
                 back.setVisibility(View.VISIBLE);
                 next.setVisibility(View.GONE);
                 break;

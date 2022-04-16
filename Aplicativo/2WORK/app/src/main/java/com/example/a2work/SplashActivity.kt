@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
         delayedShow(5000)
     }
     private val showPart2Runnable = Runnable {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
         supportActionBar?.show()
     }

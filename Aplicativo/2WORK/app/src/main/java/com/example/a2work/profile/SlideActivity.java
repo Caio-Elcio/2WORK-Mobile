@@ -9,7 +9,6 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.a2work.MainActivity;
 import com.example.a2work.R;
-import com.example.plans.SlideViewPagerAdapter;
 
 public class SlideActivity extends AppCompatActivity {
 
