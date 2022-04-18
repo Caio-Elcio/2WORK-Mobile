@@ -3,7 +3,8 @@ package com.example.a2work
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.plans.SlideActivity
+import android.view.View
+import com.example.a2work.profile.SlideActivity
 import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
@@ -31,4 +32,13 @@ class ProfileActivity : AppCompatActivity() {
             true
         }
     }
+
+    fun editar(view: View){
+        startActivity(Intent(baseContext, UpdateProfileActivity::class.java))
+    }
+
+    fun sair(view: View){
+        startActivity(Intent(baseContext, HomeActivity::class.java))
+    }
+
 }
