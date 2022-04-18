@@ -162,14 +162,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/radioButton1"
-                android:layout_width="310dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="46dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="5dp"
-                android:text="Eu concordo com todos os Termos, Política de Privacidade e Taxas." />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Eu concordo com todos os Termos, Política de Privacidade e Taxas." />
+            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
