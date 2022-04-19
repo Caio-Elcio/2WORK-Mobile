@@ -36,4 +36,12 @@ class FeedActivity : AppCompatActivity() {
         startActivity(Intent(baseContext, UploadActivity::class.java))
     }
 
+    fun perfilProjeto(view: View){
+        startActivity(Intent(baseContext, ProjectProfile::class.java))
+    }
+
+    fun projeto(view: View){
+        startActivity(Intent(baseContext, ProjectsFull::class.java))
+    }
+
 }
