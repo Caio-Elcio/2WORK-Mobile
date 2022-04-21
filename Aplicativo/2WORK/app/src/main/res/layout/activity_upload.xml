@@ -242,6 +242,7 @@
             <Button
                 android:layout_width="170dp"
                 android:layout_height="50dp"
+                android:onClick="upload"
                 android:layout_marginTop="12dp"
                 android:layout_marginRight="5dp"
                 android:backgroundTint="@color/azulEscuro"
