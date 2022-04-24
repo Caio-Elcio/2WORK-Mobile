@@ -323,6 +323,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
                         android:gravity="end">
 
                         <Button
@@ -330,6 +331,7 @@
                             android:layout_height="40dp"
                             android:backgroundTint="@color/corButtonVerProjetos"
                             android:text="Ver Projeto"
+                            android:textColor="@color/white"
                             android:layout_marginBottom="45dp"
                             android:textAllCaps="false"/>
                     </LinearLayout>
