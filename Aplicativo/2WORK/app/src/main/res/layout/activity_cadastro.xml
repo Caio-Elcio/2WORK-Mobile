@@ -40,6 +40,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/etName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -122,6 +123,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/etEmail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -138,6 +140,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/etPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -183,6 +186,7 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/btnSignUp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -190,7 +194,6 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/btn_cinza"
                 android:inputType="text"
-                android:onClick="cadastro"
                 android:text="Cadastrar"
                 android:textColor="@color/white"
                 android:textSize="15dp" />

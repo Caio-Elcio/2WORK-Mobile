@@ -1,19 +1,31 @@
 package com.example.a2work.rest
 
+import com.example.a2work.services.UsuarioService
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.sql.Time
+import java.util.concurrent.TimeUnit
 
-object Rest {
-    private val baseUrl = "http://10.0.2.2:3000/"
-    /*  Em caso de uso no celular:
-        http://10.18.33.178:3000/
-     */
-    fun getInstance(): Retrofit {
-        return Retrofit
-            .Builder()
-            .baseUrl(baseUrl)
-            .addConverterFactory(GsonConverterFactory.create())
+class Rest {
+
+    companion object {
+
+        var okHttpClient: OkHttpClient = OkHttpClient().newBuilder()
+            .connectTimeout(40, TimeUnit.SECONDS)
+            .readTimeout(60, TimeUnit.SECONDS)
+            .writeTimeout(60, TimeUnit.SECONDS)
             .build()
+
+        @JvmStatic
+        fun getInstance(): Retrofit {
+            return Retrofit
+                .Builder()
+                .client(okHttpClient)
+                .baseUrl(UsuarioService.BASE_URL_MOCK)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+        }
     }
 }
 

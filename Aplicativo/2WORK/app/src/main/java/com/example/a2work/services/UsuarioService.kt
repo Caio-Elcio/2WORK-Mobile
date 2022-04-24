@@ -6,14 +6,23 @@ import retrofit2.http.*
 
 interface UsuarioService {
 
-    @GET("/usuarios")
+    companion object {
+        val BASE_URL_MOCK = "https://6265911994374a2c5071836b.mockapi.io/"
+
+        val BASE_URL = "https://6265911994374a2c5071836b.mockapi.io/"
+        /* Em caso de uso no celular:
+            http://10.18.33.178:3000/
+         */
+    }
+
+    @GET("/users")
     fun list(
         @Header("Authorization") token: String?,
     ): Call<List<Usuario>>
 
-    @GET("/usuarios/{id}")
+    @GET("/users/{id}")
     fun getById(
-        @Path("id") id: Long,
+        @Path("id") id: String,
         @Header("Authorization") token: String?,
     ): Call<Usuario>
 

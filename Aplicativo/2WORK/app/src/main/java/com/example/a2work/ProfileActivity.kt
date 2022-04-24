@@ -9,11 +9,19 @@ import androidx.appcompat.app.AlertDialog.*
 import com.example.a2work.profile.SlideActivity
 import kotlinx.android.synthetic.main.activity_profile.*
 import android.content.DialogInterface
-
-
-
+import com.example.a2work.models.AuthResponse
+import com.example.a2work.models.Usuario
+import com.example.a2work.rest.Rest
+import com.example.a2work.services.AuthService
+import com.example.a2work.services.UsuarioService
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ProfileActivity : AppCompatActivity() {
+
+    private val retrofit = Rest.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -37,6 +45,9 @@ class ProfileActivity : AppCompatActivity() {
             }
             true
         }
+
+        getUser()
+
     }
 
     fun editar(view: View){
@@ -47,12 +58,32 @@ class ProfileActivity : AppCompatActivity() {
 
         val builder = AlertDialog.Builder(this)
         builder.setTitle("2WORK")
-        builder.setMessage("Deseja se deslogar do aplicativo?")
+        builder.setMessage("Tem certeza que deseja sair?")
         builder.setPositiveButton("Sim", { dialogInterface: DialogInterface, i: Int ->
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
             finish()
         })
         builder.setNegativeButton("Não", { dialogInterface: DialogInterface, i: Int ->})
         builder.show()
+    }
+
+    fun getUser(){
+        val request = retrofit.create(UsuarioService::class.java)
+
+        request.list("").enqueue(object : Callback<List<Usuario>>{
+            override fun onResponse(call: Call<List<Usuario>>, response: Response<List<Usuario>>) {
+                if (response.isSuccessful){
+                    tvNameUser.text = response.body()?.first()?.nomeUsuario
+                }
+            }
+
+            override fun onFailure(call: Call<List<Usuario>>, t: Throwable) {
+
+            }
+
+
+        })
     }
 
 }

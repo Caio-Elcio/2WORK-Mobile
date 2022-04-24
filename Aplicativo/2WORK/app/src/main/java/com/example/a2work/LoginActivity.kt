@@ -12,6 +12,7 @@ import com.example.a2work.models.AuthResponse
 import com.example.a2work.rest.Rest
 import com.example.a2work.services.AuthService
 import com.example.a2work.utils.Validator
+import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,9 +30,13 @@ class LoginActivity : AppCompatActivity() {
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
 
+        btnLogin.setOnClickListener {
+            login()
+        }
+
     }
 
-    fun login(view: View) {
+    fun login() {
         if (!Validator.emailIsFine(etEmail.text.toString())) {
             etEmail.error = "E-mail inválido"
         } else if (!Validator.passwordIsFine(etPassword.text.toString())) {
@@ -59,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
                         startActivity(
                             Intent(
                                 baseContext,
-                                MainActivity::class.java
+                                FeedActivity::class.java
                             )
                         )
                     }else if (response.code() == 403){

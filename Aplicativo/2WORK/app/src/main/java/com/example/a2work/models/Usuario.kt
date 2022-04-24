@@ -3,8 +3,8 @@ package com.example.a2work.models
 import java.util.*
 
 data class Usuario(
-    val idUsuario: Long,
-    val nomeUsuario: String,
+    val idUsuario: String,
+    val nomeUsuario: String?,
     val emailUsuario: String,
     val senhaUsuario: String,
     val dataNascimentoUsuario: Date,
