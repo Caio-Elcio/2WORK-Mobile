@@ -1,14 +1,13 @@
 package com.towork.backendaplicacao.controlador;
 
 import com.towork.backendaplicacao.dominio.Usuario;
-import com.towork.backendaplicacao.repositorio.ToWorkRepository;
+import com.towork.backendaplicacao.repositorio.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @CrossOrigin
 @RestController
@@ -16,7 +15,7 @@ import java.util.Objects;
 public class UsuarioController {
 
     @Autowired
-    private ToWorkRepository repository;//Está criando o banco de dados (No caso da Azure, está chamando o banco de dados).
+    private UsuarioRepository repository;//Está criando o banco de dados (No caso da Azure, está chamando o banco de dados).
 
     private List<Usuario> usuarios = new ArrayList<>();//Está criando uma lista, para podermos manipular os dados do Usuário pelo JAVA
 
@@ -35,15 +34,12 @@ public class UsuarioController {
         return ResponseEntity.status(201).build();//Retorna o Status 201 (Criado)
     }
 
-    @PostMapping("/login-usuario")// Logando um usuário
-    public ResponseEntity loginUsuario(@RequestBody Usuario usuarioLogin){//Está pegando o Body
-        usuarios = repository.findAll();//Está pegando todos os dados do banco (se não tiver nada, dará NullPointer)
-        for(Usuario usuario : usuarios){//Está percorrendo toda nossa lista de usuários no Banco
-            if(Objects.equals(usuario.getEmailUsuario(), usuarioLogin.getEmailUsuario()) &&
-            Objects.equals(usuario.getSenhaUsuario(), usuarioLogin.getSenhaUsuario())){//Está comparando se a senha e o email existem no banco
-                return ResponseEntity.status(200).build();//Retorna o Status 200 (OK)
+    @GetMapping("/login-usuario/{email}/{senha}")// Logando um usuário
+    public ResponseEntity loginUsuario(@PathVariable String email, @PathVariable String senha){//Está pegando os 2 valores passados na URL
+        Usuario usuario = repository.findByEmailUsuarioAndSenhaUsuario(email, senha) ;//Está pegando o e-mail e a senha atribuido ao PathVariable
+            if(usuario == null){//Se não encontrou nenhum usuário com esse email e senha
+                return ResponseEntity.status(204).build();//Retorna o Status 204, funcionou mas não encontrou
             }
-        }
-        return ResponseEntity.status(204).build();//Retorna o Status 204 (Funcionou, mas está vazio).
+        return ResponseEntity.status(200).build();//Retorna o Status 200 (OK).
     }
 }
