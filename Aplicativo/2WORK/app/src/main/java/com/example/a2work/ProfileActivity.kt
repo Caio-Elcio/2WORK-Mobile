@@ -47,7 +47,7 @@ class ProfileActivity : AppCompatActivity() {
 
     }
 
-    fun editar(view: View){
+    fun editarPerfil(view: View){
         startActivity(Intent(baseContext, UpdateProfileActivity::class.java))
     }
 
