@@ -1,16 +1,13 @@
 package com.example.a2work
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import com.example.a2work.models.AuthRequest
-import com.example.a2work.models.AuthResponse
 import com.example.a2work.rest.Rest
-import com.example.a2work.services.AuthService
+import com.example.a2work.services.UsuarioService
 import com.example.a2work.utils.Validator
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
@@ -42,47 +39,20 @@ class LoginActivity : AppCompatActivity() {
         } else if (!Validator.passwordIsFine(etPassword.text.toString())) {
             etPassword.error = "Senha inválida"
         } else {
-            val request = retrofit
-                .create(AuthService::class.java)
-            val authRequest = AuthRequest(
-                etEmail.text.toString(),
-                etPassword.text.toString()
-            )
-            request.login(authRequest).enqueue(object: Callback<AuthResponse>{
-                override fun onResponse(
-                    call: Call<AuthResponse>,
-                    response: Response<AuthResponse>
-                ) {
-                    if (response.isSuccessful){
-                        println(response.body()?.token)
-                        val editor = getSharedPreferences(
-                            "ACESSO",
-                            Context.MODE_PRIVATE
-                        ).edit()
-                        editor.putString("jwt_token", response.body()?.token)
-                        editor.apply()
-                        startActivity(
-                            Intent(
-                                baseContext,
-                                FeedActivity::class.java
-                            )
-                        )
-                    }else if (response.code() == 403){
-                        Toast.makeText(
-                            baseContext,
-                            "Usuário e ou senha incorretos",
-                            Toast.LENGTH_LONG
-                        ).show()
+            val usuarioRequest = retrofit.create(UsuarioService::class.java)
+            usuarioRequest.login("etEmail", "etPassword").enqueue(object: Callback<Void>{
+                override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                    if(response.isSuccessful){
+                        startActivity(Intent(baseContext, FeedActivity::class.java))
+                    } else {
+                        Toast.makeText(baseContext, "Usuario ou senha invalido", Toast.LENGTH_LONG).show()
                     }
                 }
 
-                override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
-                    Toast.makeText(
-                        baseContext,
-                        "Erro, e-mail ou senha inválidos!",
-                        Toast.LENGTH_LONG
-                    ).show()
+                override fun onFailure(call: Call<Void>, t: Throwable) {
+                    Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
                 }
+
             })
         }
     }

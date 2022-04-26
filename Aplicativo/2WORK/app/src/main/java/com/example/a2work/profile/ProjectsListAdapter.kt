@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a2work.R
-import com.example.a2work.data.profile.Project
+import com.example.a2work.data.profile.models.Project
 import kotlinx.android.synthetic.main.activity_profile.view.*
 import kotlinx.android.synthetic.main.layout_item_my_projects.view.*
 

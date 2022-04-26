@@ -7,10 +7,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.example.a2work.models.AuthRequest
-import com.example.a2work.models.AuthRequestSignUp
+import com.example.a2work.data.profile.models.Usuario
 import com.example.a2work.rest.Rest
-import com.example.a2work.services.AuthService
+import com.example.a2work.services.UsuarioService
 import kotlinx.android.synthetic.main.activity_cadastro.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -23,10 +22,6 @@ class CadastroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
-
-        btnSignUp.setOnClickListener {
-            signUp()
-        }
     }
 
     fun termos(view: View) {
@@ -47,34 +42,41 @@ class CadastroActivity : AppCompatActivity() {
         builder.show()
     }
 
-    fun signUp(){
-        val request = retrofit
-            .create(AuthService::class.java)
-
-        // Adiciona os outros campos aqui e os parametros no AuthRequestSignUp
-        val authRequest = AuthRequestSignUp(
-            etName.text.toString(),
-            etEmail.text.toString(),
-            etPassword.text.toString()
+    fun signUp(view: View){
+        val usuarioRequest = retrofit.create(UsuarioService::class.java)
+        val novoUsuario = Usuario(
+            idUsuario = null,
+            nomeUsuario = etName.text.toString(),
+            emailUsuario = etEmail.text.toString(),
+            senhaUsuario = etPassword.text.toString(),
+            dataNascimentoUsuario = etData.text.toString(),
+            biografiaUsuario = "Escreva algo sobre você aqui!",
+            avaliacaoUsuario = 0.0,
+            cpfUsuario = etCpf.text.toString(),
+            cidadeUsuario = etCidade.text.toString(),
+            ufUsuario = etUf.text.toString(),
+            planoUsuario = "Basic"
         )
+        usuarioRequest.cadastar(novoUsuario).enqueue(object: Callback<Void>{
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                if(response.isSuccessful){
+                    Toast.makeText(baseContext, "Usuário cadastrado!", Toast.LENGTH_LONG).show()
+                    startActivity(Intent(baseContext, LoginActivity::class.java))
 
-        request.addUser(authRequest).enqueue(object : Callback<AuthRequestSignUp>{
-            override fun onResponse(
-                call: Call<AuthRequestSignUp>,
-                response: Response<AuthRequestSignUp>
-            ) {
-                if (response.isSuccessful) {
-                    // Coloca um loading antes de ir para o feed, pq demora pra fazer a requisição e fica estranho quando clica no botão e não acontece nada
-                    startActivity(Intent(baseContext, FeedActivity::class.java))
-                    finish()
+                } else {
+                    Toast.makeText(baseContext, "Usuário e/ou senha estão incorretos!", Toast.LENGTH_LONG).show()
                 }
             }
 
-            override fun onFailure(call: Call<AuthRequestSignUp>, t: Throwable) {
-                Toast.makeText(baseContext, "Erro", Toast.LENGTH_SHORT).show()
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
             }
 
         })
+    }
+
+    fun enviarLogin(view: View){
+        startActivity(Intent(baseContext, LoginActivity::class.java))
     }
 
 }

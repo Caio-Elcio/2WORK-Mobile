@@ -1,17 +1,15 @@
-package com.example.a2work.models
-
-import java.util.*
+package com.example.a2work.data.profile.models
 
 data class Usuario(
-    val idUsuario: String,
+    val idUsuario: Int?,
     val nomeUsuario: String?,
     val emailUsuario: String,
     val senhaUsuario: String,
-    val dataNascimentoUsuario: Date,
+    val dataNascimentoUsuario: String,
     val biografiaUsuario: String,
-    val avaliacaoUsuario: Int,
-    val cpfUsuario: Long,
+    val avaliacaoUsuario: Double,
+    val cpfUsuario: String,
     val cidadeUsuario: String,
     val ufUsuario: String,
-    val planoUsuario: String,
+    val planoUsuario: String
 )

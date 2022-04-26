@@ -5,14 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AlertDialog.*
 import com.example.a2work.profile.SlideActivity
 import kotlinx.android.synthetic.main.activity_profile.*
 import android.content.DialogInterface
-import com.example.a2work.models.AuthResponse
-import com.example.a2work.models.Usuario
+import com.example.a2work.data.profile.models.Usuario
 import com.example.a2work.rest.Rest
-import com.example.a2work.services.AuthService
 import com.example.a2work.services.UsuarioService
 import retrofit2.Call
 import retrofit2.Callback

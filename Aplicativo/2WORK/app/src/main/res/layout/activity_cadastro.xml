@@ -57,6 +57,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/etData"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -67,6 +68,7 @@
                 android:textSize="16dp" />
 
             <EditText
+                android:id="@+id/etCpf"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -82,6 +84,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/etCidade"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -92,6 +95,7 @@
                 android:textSize="16dp" />
 
             <EditText
+                android:id="@+id/etUf"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -107,6 +111,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/etTelefone"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -131,7 +136,7 @@
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
                 android:hint="Email"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:textSize="16dp" />
         </LinearLayout>
 
@@ -147,7 +152,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:hint="Senha"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:textSize="16dp" />
 
             <EditText
@@ -186,7 +191,6 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/btnSignUp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -196,7 +200,8 @@
                 android:inputType="text"
                 android:text="Cadastrar"
                 android:textColor="@color/white"
-                android:textSize="15dp" />
+                android:textSize="15dp"
+                android:onClick="signUp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -206,9 +211,9 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="70dp"
                 android:layout_weight="2"
-                android:hint="Ainda não possui uma conta ?"
+                android:hint="Já possui uma conta ?"
                 android:inputType="text"
                 android:textColor="@color/white"
                 android:textSize="13dp" />
@@ -216,12 +221,14 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="50dp"
+                android:layout_marginRight="70dp"
                 android:layout_weight="1"
                 android:text="Fazer Login"
                 android:textColor="@color/azulEscuro"
                 android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="enviarLogin"/>
+
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
