@@ -26,7 +26,7 @@ public class UsuarioController {
     }//Checar os usuarios da nossa lista
 
     @PostMapping("/cadastrar-usuario")// Cadastrando um usuário
-    public ResponseEntity cadastroUsuario(@RequestBody Usuario novoUsuario){//Está pegando o Body
+    public ResponseEntity cadastroUsuario(@RequestBody Usuario novoUsuario) {//Está pegando o Body
         novoUsuario.setAvaliacaoUsuario(0.0);//Quando o usuário se cadastra, sua avaliação começa com 0.0
         novoUsuario.setPlanoUsuario("Basic");//Quando o usuário se cadastra, seu plano padrão é o Basic
         System.out.println(novoUsuario);
@@ -35,11 +35,21 @@ public class UsuarioController {
     }
 
     @GetMapping("/login-usuario/{email}/{senha}")// Logando um usuário
-    public ResponseEntity loginUsuario(@PathVariable String email, @PathVariable String senha){//Está pegando os 2 valores passados na URL
-        Usuario usuario = repository.findByEmailUsuarioAndSenhaUsuario(email, senha) ;//Está pegando o e-mail e a senha atribuido ao PathVariable
-            if(usuario == null){//Se não encontrou nenhum usuário com esse email e senha
-                return ResponseEntity.status(204).build();//Retorna o Status 204, funcionou mas não encontrou
+    public ResponseEntity loginUsuario(@PathVariable String email, @PathVariable String senha) {//Está pegando os 2 valores passados na URL
+        //Usuario usuario = repository.findByEmailUsuarioAndSenhaUsuario(email, senha);//Está pegando o e-mail e a senha atribuido ao PathVariable
+        //if(usuario == null){//Se não encontrou nenhum usuário com esse email e senha
+        //    return ResponseEntity.status(200).build();//Retorna o Status 204, funcionou mas não encontrou
+        //}
+        //return ResponseEntity.status(400).build();//Retorna o Status 200 (OK).
+        List<Usuario> usuario = repository.findAll();//Está pegando o e-mail e a senha atribuido ao PathVariable
+        for (Usuario u : usuario) {
+            System.out.println(u);
+            System.out.println(u.getEmailUsuario());
+            System.out.println(email);
+            if (u.getEmailUsuario().equals(email) && u.getSenhaUsuario().equals(senha)) {
+                return ResponseEntity.status(200).build();
             }
-        return ResponseEntity.status(200).build();//Retorna o Status 200 (OK).
+        }
+        return ResponseEntity.status(400).build();
     }
 }

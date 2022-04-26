@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
             etPassword.error = "Senha inválida"
         } else {
             val usuarioRequest = retrofit.create(UsuarioService::class.java)
-            usuarioRequest.login("etEmail", "etPassword").enqueue(object: Callback<Void>{
+            usuarioRequest.login(etEmail.text.toString(), etPassword.text.toString()).enqueue(object: Callback<Void>{
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if(response.isSuccessful){
                         startActivity(Intent(baseContext, FeedActivity::class.java))
