@@ -109,9 +109,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_weight="1"
                     android:text="BioTec                🖤 5"
-                    android:textSize="13dp"
-
-                    />
+                    android:textSize="13dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -154,9 +152,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_weight="1"
                     android:text="BioTec                🖤 5"
-                    android:textSize="13dp"
-
-                    />
+                    android:textSize="13dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -199,9 +195,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_weight="1"
                     android:text="BioTec                🖤 5"
-                    android:textSize="13dp"
-
-                    />
+                    android:textSize="13dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -244,9 +238,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_weight="1"
                     android:text="BioTec                🖤 5"
-                    android:textSize="13dp"
-
-                    />
+                    android:textSize="13dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -289,9 +281,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_weight="1"
                     android:text="BioTec                🖤 5"
-                    android:textSize="13dp"
-
-                    />
+                    android:textSize="13dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -334,9 +324,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_weight="1"
                     android:text="BioTec                🖤 5"
-                    android:textSize="13dp"
-
-                    />
+                    android:textSize="13dp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -352,5 +340,4 @@
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

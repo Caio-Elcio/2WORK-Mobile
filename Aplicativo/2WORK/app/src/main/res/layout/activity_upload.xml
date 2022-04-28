@@ -28,7 +28,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:src="@drawable/capa" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -138,9 +137,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_weight="0"
                     android:text="Não" />
-
             </RadioGroup>
-
         </LinearLayout>
 
         <LinearLayout
@@ -230,7 +227,6 @@
                     android:layout_marginTop="2dp"
                     android:layout_weight="0"
                     android:text="Não" />
-
             </RadioGroup>
         </LinearLayout>
 
@@ -242,10 +238,10 @@
             <Button
                 android:layout_width="170dp"
                 android:layout_height="50dp"
-                android:onClick="upload"
                 android:layout_marginTop="12dp"
                 android:layout_marginRight="5dp"
                 android:backgroundTint="@color/azulEscuro"
+                android:onClick="upload"
                 android:text="Realizar upload"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -279,5 +275,4 @@
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

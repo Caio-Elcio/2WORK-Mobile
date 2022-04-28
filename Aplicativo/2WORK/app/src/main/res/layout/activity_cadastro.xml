@@ -63,7 +63,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:hint="Data nasc"
+                android:hint="Data Nascimento"
                 android:inputType="date"
                 android:textSize="16dp" />
 
@@ -135,8 +135,8 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
-                android:hint="Email"
-                android:inputType="textPassword"
+                android:hint="E-mail"
+                android:inputType="text"
                 android:textSize="16dp" />
         </LinearLayout>
 
@@ -161,8 +161,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
-                android:hint="Confirmar senha"
-                android:inputType="text"
+                android:hint="Confirmar Senha"
+                android:inputType="textPassword"
                 android:textSize="16dp" />
         </LinearLayout>
 
@@ -177,11 +177,11 @@
                 <RadioButton
                     android:id="@+id/radioButton1"
                     android:layout_width="310dp"
-                    android:onClick="termos"
                     android:layout_height="50dp"
                     android:layout_marginLeft="46dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="5dp"
+                    android:onClick="termos"
                     android:text="Eu concordo com todos os Termos, Política de Privacidade e Taxas." />
             </RadioGroup>
         </LinearLayout>
@@ -196,12 +196,12 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/btn_cinza"
+                android:backgroundTint="@color/azulEscuro"
                 android:inputType="text"
+                android:onClick="signUp"
                 android:text="Cadastrar"
                 android:textColor="@color/white"
-                android:textSize="15dp"
-                android:onClick="signUp"/>
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -223,12 +223,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="70dp"
                 android:layout_weight="1"
+                android:onClick="enviarLogin"
                 android:text="Fazer Login"
                 android:textColor="@color/azulEscuro"
                 android:textSize="15dp"
-                android:textStyle="bold"
-                android:onClick="enviarLogin"/>
-
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

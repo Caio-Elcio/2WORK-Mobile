@@ -11,37 +11,36 @@ class FeedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
-            bottom_navigation_home.setOnNavigationItemSelectedListener { item ->
-                when(item.itemId) {
-                    R.id.navi_home -> {
-                    }
-                    R.id.navi_upload -> {
-                        startActivity(Intent(this, UploadActivity::class.java))
-                    }
-                    R.id.navi_projeto -> {
-                        startActivity(Intent(this, ProjetosActivity::class.java))
-                    }
-                    R.id.navi_conta -> {
-                        startActivity(Intent(this, ProfileActivity::class.java))
-                    }
-                    R.id.navi_planos -> {
-                        startActivity(Intent(this, SlideActivity::class.java))
-                    }
+        bottom_navigation_home.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navi_home -> {
                 }
-                true
+                R.id.navi_upload -> {
+                    startActivity(Intent(this, UploadActivity::class.java))
+                }
+                R.id.navi_projeto -> {
+                    startActivity(Intent(this, ProjetosActivity::class.java))
+                }
+                R.id.navi_conta -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                }
+                R.id.navi_planos -> {
+                    startActivity(Intent(this, SlideActivity::class.java))
+                }
             }
+            true
+        }
     }
 
-    fun upload(view: View){
+    fun upload(view: View) {
         startActivity(Intent(baseContext, UploadActivity::class.java))
     }
 
-    fun perfilProjeto(view: View){
+    fun perfilProjeto(view: View) {
         startActivity(Intent(baseContext, ProjectProfile::class.java))
     }
 
-    fun projeto(view: View){
+    fun projeto(view: View) {
         startActivity(Intent(baseContext, ProjectsFull::class.java))
     }
-
 }

@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.a2work.profile.SlideActivity
-import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_projetos.*
 
 class ProjetosActivity : AppCompatActivity() {
@@ -13,7 +12,7 @@ class ProjetosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_projetos)
 
         bottom_navigation_projetos.setOnNavigationItemSelectedListener { item ->
-            when(item.itemId) {
+            when (item.itemId) {
                 R.id.navi_home -> {
                     startActivity(Intent(this, FeedActivity::class.java))
                 }

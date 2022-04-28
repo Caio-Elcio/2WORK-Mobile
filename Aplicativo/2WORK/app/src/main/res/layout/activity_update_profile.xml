@@ -64,7 +64,6 @@
                     android:src="@drawable/camera"
                     app:layout_constraintEnd_toEndOf="@id/circle"
                     app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -156,8 +155,8 @@
                 android:layout_marginBottom="25dp"
                 android:background="@drawable/custom_button_radius"
                 android:backgroundTint="@color/blue"
-                android:text="Salvar"
                 android:onClick="salvar"
+                android:text="Salvar"
                 android:textAllCaps="false"
                 android:textColor="@color/grey"
                 android:textSize="14sp"
@@ -193,10 +192,7 @@
                     android:layout_marginTop="60dp"
                     android:text="a" />
             </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -210,5 +206,4 @@
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

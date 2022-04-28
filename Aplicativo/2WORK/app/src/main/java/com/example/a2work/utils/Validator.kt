@@ -17,5 +17,4 @@ object Validator {
             else -> true
         }
     }
-
 }

@@ -1,11 +1,9 @@
 package com.example.a2work
 
-import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AlertDialog
 import com.example.a2work.profile.SlideActivity
 import kotlinx.android.synthetic.main.activity_profile.*
 
@@ -34,10 +32,8 @@ class UpdateProfileActivity : AppCompatActivity() {
             true
         }
 
-        fun voltar(view: View){
+        fun voltar(view: View) {
             startActivity(Intent(baseContext, ProfileActivity::class.java))
         }
-
-
     }
 }

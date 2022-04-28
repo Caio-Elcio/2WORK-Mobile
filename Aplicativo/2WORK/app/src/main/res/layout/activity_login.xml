@@ -62,7 +62,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
-                android:hint="Email"
+                android:hint="E-mail"
                 android:inputType="text"
                 android:textSize="16dp" />
         </LinearLayout>
@@ -80,7 +80,7 @@
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
                 android:hint="Senha"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:textSize="16dp" />
         </LinearLayout>
 
@@ -137,11 +137,11 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="50dp"
                 android:layout_weight="1"
+                android:onClick="registrar"
                 android:text="Registre-se"
                 android:textColor="@color/azulEscuro"
                 android:textSize="15dp"
-                android:textStyle="bold"
-                android:onClick="registrar"/>
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

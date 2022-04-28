@@ -30,35 +30,37 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             login()
         }
-
     }
 
     fun login() {
         if (!Validator.emailIsFine(etEmail.text.toString())) {
-            etEmail.error = "E-mail inválido"
+            etEmail.error = "E-mail inválido!"
         } else if (!Validator.passwordIsFine(etPassword.text.toString())) {
-            etPassword.error = "Senha inválida"
+            etPassword.error = "Senha inválida!"
         } else {
             val usuarioRequest = retrofit.create(UsuarioService::class.java)
-            usuarioRequest.login(etEmail.text.toString(), etPassword.text.toString()).enqueue(object: Callback<Void>{
-                override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                    if(response.isSuccessful){
-                        startActivity(Intent(baseContext, FeedActivity::class.java))
-                    } else {
-                        Toast.makeText(baseContext, "Usuario ou senha invalido", Toast.LENGTH_LONG).show()
+            usuarioRequest.login(etEmail.text.toString(), etPassword.text.toString())
+                .enqueue(object : Callback<Void> {
+                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                        if (response.isSuccessful) {
+                            startActivity(Intent(baseContext, FeedActivity::class.java))
+                        } else {
+                            Toast.makeText(
+                                baseContext,
+                                "Usuário e/ou senha estão incorretos!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
                     }
-                }
 
-                override fun onFailure(call: Call<Void>, t: Throwable) {
-                    Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
-                }
-
-            })
+                    override fun onFailure(call: Call<Void>, t: Throwable) {
+                        Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
+                    }
+                })
         }
     }
 
-    fun registrar(view: View){
+    fun registrar(view: View) {
         startActivity(Intent(baseContext, CadastroActivity::class.java))
     }
-
 }

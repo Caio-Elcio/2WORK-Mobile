@@ -28,15 +28,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-
                 <Button
                     android:id="@+id/btnEdit"
                     android:layout_width="125dp"
                     android:layout_height="35dp"
-                    android:onClick="editarPerfil"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="26dp"
                     android:background="@drawable/custom_button_radius"
+                    android:onClick="editarPerfil"
                     android:text="Editar Perfil"
                     android:textAllCaps="false"
                     android:textColor="@color/blue"
@@ -93,7 +92,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/circle" />
 
-
                 <TextView
                     android:id="@+id/tv_plano"
                     android:layout_width="wrap_content"
@@ -115,9 +113,7 @@
                     android:src="@drawable/coroa"
                     app:layout_constraintEnd_toStartOf="@id/tv_plano"
                     app:layout_constraintTop_toBottomOf="@+id/tvNameUser" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_infos"
@@ -127,7 +123,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layout_profile">
-
 
                 <TextView
                     android:id="@+id/nome"
@@ -210,9 +205,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/email" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
             <LinearLayout
                 android:id="@+id/layout_icons"
@@ -255,7 +248,6 @@
                         android:textSize="25sp"
                         android:textStyle="bold"
                         app:layout_constraintTop_toBottomOf="@id/layout" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -289,7 +281,6 @@
                         android:textSize="25sp"
                         android:textStyle="bold"
                         app:layout_constraintTop_toBottomOf="@id/layout" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -322,11 +313,8 @@
                         android:textSize="25sp"
                         android:textStyle="bold"
                         app:layout_constraintTop_toBottomOf="@id/layout" />
-
                 </LinearLayout>
-
             </LinearLayout>
-
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -359,7 +347,6 @@
                     tools:itemCount="1"
                     tools:listitem="@layout/layout_item_my_projects" />
 
-
                 <TextView
                     android:id="@+id/tv_liked_projects"
                     android:layout_width="wrap_content"
@@ -384,13 +371,8 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_liked_projects"
                     tools:itemCount="0"
                     tools:listitem="@layout/layout_item_liked_projects" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -404,5 +386,4 @@
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

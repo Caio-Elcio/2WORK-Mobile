@@ -42,17 +42,14 @@ class ProfileActivity : AppCompatActivity() {
             }
             true
         }
-
         getUser()
-
     }
 
-    fun editarPerfil(view: View){
+    fun editarPerfil(view: View) {
         startActivity(Intent(baseContext, UpdateProfileActivity::class.java))
     }
 
     fun showAlertDialog(view: View) {
-
         val builder = AlertDialog.Builder(this)
         builder.setTitle("2WORK")
         builder.setMessage("Tem certeza que deseja sair?")
@@ -61,26 +58,21 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         })
-        builder.setNegativeButton("Não", { dialogInterface: DialogInterface, i: Int ->})
+        builder.setNegativeButton("Não", { dialogInterface: DialogInterface, i: Int -> })
         builder.show()
     }
 
-    fun getUser(){
+    fun getUser() {
         val request = retrofit.create(UsuarioService::class.java)
-
-        request.list("").enqueue(object : Callback<List<Usuario>>{
+        request.list("").enqueue(object : Callback<List<Usuario>> {
             override fun onResponse(call: Call<List<Usuario>>, response: Response<List<Usuario>>) {
-                if (response.isSuccessful){
+                if (response.isSuccessful) {
                     tvNameUser.text = response.body()?.first()?.nomeUsuario
                 }
             }
 
             override fun onFailure(call: Call<List<Usuario>>, t: Throwable) {
-
             }
-
-
         })
     }
-
 }

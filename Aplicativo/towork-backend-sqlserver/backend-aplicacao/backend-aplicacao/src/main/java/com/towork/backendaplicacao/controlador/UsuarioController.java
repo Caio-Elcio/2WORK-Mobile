@@ -15,33 +15,38 @@ import java.util.List;
 public class UsuarioController {
 
     @Autowired
-    private UsuarioRepository repository;//Está criando o banco de dados (No caso da Azure, está chamando o banco de dados).
+    // Está criando o banco de dados (No caso da Azure, está chamando o banco de dados).
+    private UsuarioRepository repository;
 
-    private List<Usuario> usuarios = new ArrayList<>();//Está criando uma lista, para podermos manipular os dados do Usuário pelo JAVA
+    // Está criando uma lista, para podermos manipular os dados do Usuário pelo JAVA.
+    private List<Usuario> usuarios = new ArrayList<>();
 
-    @GetMapping//Comentar esse método no dia da Sprint
+    @GetMapping // Comentar esse método no dia da Sprint
     public List<Usuario> getUsuario() {
-        usuarios = repository.findAll();//Está pegando todos os dados do banco (se não tiver nada, dará NullPointer)
+        usuarios = repository.findAll(); // Está pegando todos os dados do banco (se não tiver nada, dará NullPointer)
         return usuarios;
-    }//Checar os usuarios da nossa lista
+    } // Checar os usuarios da nossa lista
 
-    @PostMapping("/cadastrar-usuario")// Cadastrando um usuário
-    public ResponseEntity cadastroUsuario(@RequestBody Usuario novoUsuario) {//Está pegando o Body
-        novoUsuario.setAvaliacaoUsuario(0.0);//Quando o usuário se cadastra, sua avaliação começa com 0.0
-        novoUsuario.setPlanoUsuario("Basic");//Quando o usuário se cadastra, seu plano padrão é o Basic
+    @PostMapping("/cadastrar-usuario") // Cadastrando um usuário
+    public ResponseEntity cadastroUsuario(@RequestBody Usuario novoUsuario) { // Está pegando o Body
+        novoUsuario.setAvaliacaoUsuario(0.0); // Quando o usuário se cadastra, sua avaliação começa com 0.0
+        novoUsuario.setPlanoUsuario("Basic"); // Quando o usuário se cadastra, seu plano padrão é o Basic
         System.out.println(novoUsuario);
-        repository.save(novoUsuario);//Está dando o INSERT no banco de dados com os dados que estão escritos no JSON
-        return ResponseEntity.status(201).build();//Retorna o Status 201 (Criado)
+        repository.save(novoUsuario); // Está dando o INSERT no banco de dados com os dados que estão escritos no JSON
+        return ResponseEntity.status(201).build(); // Retorna o Status 201 (Criado)
     }
 
-    @GetMapping("/login-usuario/{email}/{senha}")// Logando um usuário
-    public ResponseEntity loginUsuario(@PathVariable String email, @PathVariable String senha) {//Está pegando os 2 valores passados na URL
-        //Usuario usuario = repository.findByEmailUsuarioAndSenhaUsuario(email, senha);//Está pegando o e-mail e a senha atribuido ao PathVariable
-        //if(usuario == null){//Se não encontrou nenhum usuário com esse email e senha
-        //    return ResponseEntity.status(200).build();//Retorna o Status 204, funcionou mas não encontrou
-        //}
-        //return ResponseEntity.status(400).build();//Retorna o Status 200 (OK).
-        List<Usuario> usuario = repository.findAll();//Está pegando o e-mail e a senha atribuido ao PathVariable
+    @GetMapping("/login-usuario/{email}/{senha}") // Logando um usuário
+    // Está pegando os 2 valores passados na URL
+    public ResponseEntity loginUsuario(@PathVariable String email, @PathVariable String senha) {
+        // Usuario usuario = repository.findByEmailUsuarioAndSenhaUsuario(email, senha); // Está pegando o e-mail e
+        // a senha atribuido ao PathVariable
+
+        // if(usuario == null){ // Se não encontrou nenhum usuário com esse email e senha
+        //    return ResponseEntity.status(200).build(); // Retorna o Status 204, funcionou mas não encontrou
+        // }
+        // return ResponseEntity.status(400).build(); // Retorna o Status 200 (OK).
+        List<Usuario> usuario = repository.findAll(); // Está pegando o e-mail e a senha atribuido ao PathVariable
         for (Usuario u : usuario) {
             System.out.println(u);
             System.out.println(u.getEmailUsuario());

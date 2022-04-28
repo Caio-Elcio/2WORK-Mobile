@@ -7,9 +7,8 @@ object Rest {
 
     var baseUrl = "http://10.0.2.2:8080"
 
-    fun getInstance(): Retrofit{
+    fun getInstance(): Retrofit {
         return Retrofit.Builder().baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create()).build()
     }
 }
-

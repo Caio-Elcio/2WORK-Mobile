@@ -42,7 +42,7 @@
                     android:text="Faça o upload de seu Projeto!"
                     android:textColor="@color/black"
                     android:textSize="30dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
                     android:justificationMode="inter_word"
                     android:text="O painel do projeto é um recurso exclusivo para contratos de trabalho. É perfeito para freelancers, agências e moonlighters na 2WORK!"
                     android:textColor="@color/black"
-                    android:textSize="20dp"/>
+                    android:textSize="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -67,7 +67,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/ic_undraw_code_thinking_re_gka2_1" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -101,7 +100,7 @@
                     android:text="Projetos Recentes!"
                     android:textColor="@color/black"
                     android:textSize="30dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -112,7 +111,7 @@
                     android:justificationMode="inter_word"
                     android:text="03 novos projetos adicionados"
                     android:textColor="@color/black"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -121,8 +120,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/azulEscuro">
-            </LinearLayout>
+                android:background="@color/azulEscuro"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -152,7 +150,7 @@
                             android:onClick="perfilProjeto"
                             android:textColor="@color/black"
                             android:textSize="17dp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -161,7 +159,7 @@
                             android:gravity="center_vertical"
                             android:hint="Postado há 55 segundos..."
                             android:textColor="@color/black"
-                            android:textSize="12dp"/>
+                            android:textSize="12dp" />
                     </LinearLayout>
 
                     <TextView
@@ -172,7 +170,7 @@
                         android:justificationMode="inter_word"
                         android:text="O painel do projeto é um recurso exclusivo para contratos de trabalho. É perfeito para freelancers, agências e moonlighters na 2WORK!"
                         android:textColor="@color/black"
-                        android:textSize="15dp"/>
+                        android:textSize="15dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -197,9 +195,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/azulEscuro">
-
-            </LinearLayout>
+                android:background="@color/azulEscuro"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -228,7 +224,7 @@
                             android:hint="Caio Elcio"
                             android:textColor="@color/black"
                             android:textSize="17dp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -237,7 +233,7 @@
                             android:gravity="center_vertical"
                             android:hint="Postado há 55 segundos..."
                             android:textColor="@color/black"
-                            android:textSize="12dp"/>
+                            android:textSize="12dp" />
                     </LinearLayout>
 
                     <TextView
@@ -248,7 +244,7 @@
                         android:justificationMode="inter_word"
                         android:text="O painel do projeto é um recurso exclusivo para contratos de trabalho. É perfeito para freelancers, agências e moonlighters na 2WORK!"
                         android:textColor="@color/black"
-                        android:textSize="15dp"/>
+                        android:textSize="15dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -272,7 +268,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/azulEscuro"/>
+                android:background="@color/azulEscuro" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -301,7 +297,7 @@
                             android:hint="Lucas Felix"
                             android:textColor="@color/black"
                             android:textSize="17dp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -310,7 +306,7 @@
                             android:gravity="center_vertical"
                             android:hint="Postado há 55 segundos..."
                             android:textColor="@color/black"
-                            android:textSize="12dp"/>
+                            android:textSize="12dp" />
                     </LinearLayout>
 
                     <TextView
@@ -321,7 +317,7 @@
                         android:justificationMode="inter_word"
                         android:text="O painel do projeto é um recurso exclusivo para contratos de trabalho. É perfeito para freelancers, agências e moonlighters na 2WORK!"
                         android:textColor="@color/black"
-                        android:textSize="15dp"/>
+                        android:textSize="15dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -332,14 +328,12 @@
                         <Button
                             android:layout_width="120dp"
                             android:layout_height="40dp"
+                            android:layout_marginBottom="45dp"
                             android:backgroundTint="@color/corButtonVerProjetos"
                             android:text="Ver Projeto"
                             android:textAllCaps="false"
-                            android:layout_marginBottom="45dp"
-                            android:textColor="@color/white"
-                            />
+                            android:textColor="@color/white" />
                     </LinearLayout>
-
                 </LinearLayout>
             </LinearLayout>
 
@@ -349,7 +343,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/azulEscuro"/>
+                android:background="@color/azulEscuro" />
         </LinearLayout>
     </ScrollView>
 

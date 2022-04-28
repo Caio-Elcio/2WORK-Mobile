@@ -15,6 +15,8 @@ interface UsuarioService {
     fun cadastar(@Body novoUsuario: Usuario): Call<Void>
 
     @GET("/2Work/login-usuario/{email}/{senha}")
-    fun login(@Path("email") email: String,
-              @Path("senha") senha: String): Call<Void>
+    fun login(
+        @Path("email") email: String,
+        @Path("senha") senha: String
+    ): Call<Void>
 }

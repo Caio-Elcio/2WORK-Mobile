@@ -1,15 +1,15 @@
 package com.towork.backendaplicacao.dominio;
+
 import javax.persistence.*;
 
 @Entity
 public class Usuario {
 
-    //Atributos - NOTA: Troquei o CPF e a data para String, testes
+    // Atributos - NOTA: Troquei o CPF e a data para String, testes
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUsuario;
     private String nomeUsuario;
-
     private String emailUsuario;
     private String senhaUsuario;
     private String dataNascimento;
@@ -21,7 +21,7 @@ public class Usuario {
     private String ufUsuario;
     private String planoUsuario;
 
-    //Construtor
+    // Construtor
     public Usuario(Integer idUsuario, String nomeUsuario, String emailUsuario, String senhaUsuario, String dataNascimento, String biografiaUsuario, Double avaliacaoUsuario, String cpfUsuario, String cidadeUsuario, String ufUsuario, String planoUsuario) {
         this.idUsuario = idUsuario;
         this.nomeUsuario = nomeUsuario;
@@ -36,10 +36,10 @@ public class Usuario {
         this.planoUsuario = planoUsuario;
     }
 
-    public Usuario(){//Foi necessário criar um construtor Default
+    public Usuario() { //Foi necessário criar um construtor Default
     }
 
-    //ToString
+    // toString
     @Override
     public String toString() {
         return "Usuario{" +
@@ -55,7 +55,7 @@ public class Usuario {
                 '}';
     }
 
-    //Getters e Setters
+    // Getters e Setters
     public Integer getIdUsuario() {
         return idUsuario;
     }

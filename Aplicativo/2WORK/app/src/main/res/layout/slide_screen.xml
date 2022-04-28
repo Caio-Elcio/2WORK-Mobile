@@ -195,10 +195,7 @@
             android:layout_marginLeft="180dp"
             android:text="BASIC"
             android:textColor="@color/white"
-            android:textStyle="bold">
-
-        </TextView>
-
+            android:textStyle="bold"></TextView>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -212,5 +209,4 @@
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

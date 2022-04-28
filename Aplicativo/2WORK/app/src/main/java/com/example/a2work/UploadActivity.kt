@@ -7,8 +7,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.example.a2work.profile.SlideActivity
-import kotlinx.android.synthetic.main.activity_profile.*
-import kotlinx.android.synthetic.main.activity_projetos.*
 import kotlinx.android.synthetic.main.activity_upload.*
 
 class UploadActivity : AppCompatActivity() {
@@ -41,11 +39,8 @@ class UploadActivity : AppCompatActivity() {
 
         val builder = AlertDialog.Builder(this)
         builder.setTitle("2WORK")
-        builder.setMessage("Projeto postado com sucesso")
-        builder.setPositiveButton("OK", { dialogInterface: DialogInterface, i: Int ->})
+        builder.setMessage("Projeto publicado com sucesso!")
+        builder.setPositiveButton("OK", { dialogInterface: DialogInterface, i: Int -> })
         builder.show()
     }
-
-
-
 }

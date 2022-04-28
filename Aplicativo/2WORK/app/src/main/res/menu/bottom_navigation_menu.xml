@@ -4,28 +4,26 @@
         android:id="@+id/navi_home"
         android:enabled="true"
         android:icon="@drawable/ic_home"
-        android:title="Home"/>
+        android:title="Home" />
     <item
         android:id="@+id/navi_upload"
         android:enabled="true"
         android:icon="@drawable/ic_upload"
-        android:title="Upload"
-        />
+        android:title="Upload" />
     <item
         android:id="@+id/navi_projeto"
         android:enabled="true"
         android:icon="@drawable/ic_projetos"
-        android:title="Projetos"
-        />
+        android:title="Projetos" />
     <item
         android:id="@+id/navi_conta"
         android:enabled="true"
         android:icon="@drawable/ic_conta"
-        android:title="Conta"/>
+        android:title="Conta" />
     <item
         android:id="@+id/navi_planos"
+        android:backgroundTint="@color/blue"
         android:enabled="true"
         android:icon="@drawable/ic_planos"
-        android:title="Planos"
-        android:backgroundTint="@color/blue"/>
+        android:title="Planos" />
 </menu>
