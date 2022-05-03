@@ -87,6 +87,8 @@ public class SlideViewPagerAdapter extends PagerAdapter {
                 ind2.setImageResource(R.drawable.unselected);
                 ind3.setImageResource(R.drawable.unselected);
                 texto.setText("Plano Basic");
+                desc3.setText("");
+                desc4.setText("");
 //                desc.setText("Contratado");
                 back.setVisibility(View.GONE);
                 next.setVisibility(View.VISIBLE);
@@ -94,17 +96,17 @@ public class SlideViewPagerAdapter extends PagerAdapter {
                 break;
 
             case 1:
-                logo.setImageResource(R.drawable.segundo);
+                logo.setImageResource(R.drawable.primeiro);
                 ind1.setImageResource(R.drawable.unselected);
                 ind2.setImageResource(R.drawable.selected);
                 ind3.setImageResource(R.drawable.unselected);
 
                 btnIniciar.setText("Assinar");
                 texto.setText("Plano Pro");
+                titulo.setText("PRO");
                 desc.setText("1 - Recomendado para projetos independentes");
                 desc2.setText("2 - Upload de até 3 projetos no mês");
                 desc3.setText("3 - Visualizar todos os projetos na plataforma");
-                titulo.setText("PRO");
                 back.setVisibility(View.VISIBLE);
                 next.setVisibility(View.VISIBLE);
                 break;
@@ -115,16 +117,17 @@ public class SlideViewPagerAdapter extends PagerAdapter {
                 ind2.setImageResource(R.drawable.unselected);
                 ind3.setImageResource(R.drawable.selected);
 
+                btnIniciar.setText("Assinar");
+                texto.setText("Plano Premium");
+                titulo.setText("Premium");
+                desc.setText("1 - O plano mais economico da plataforma!");
                 desc2.setText("2 - Recomendado para empresas");
                 desc3.setText("3 - Upload de 5 projetos no mês");
-                texto.setText("Plano PREMIUM");
-                desc.setText("1 - Economia de 130.00 (Anual)");
                 desc4.setText("4 - Visualizar todos os projetos na plataforma");
-                btnIniciar.setText("Assinar");
-                titulo.setText("PREMIUM");
                 back.setVisibility(View.VISIBLE);
                 next.setVisibility(View.GONE);
                 break;
+
         }
         container.addView(view);
         return view;
