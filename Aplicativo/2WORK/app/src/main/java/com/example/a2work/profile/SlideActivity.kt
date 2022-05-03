@@ -14,6 +14,7 @@ class SlideActivity : AppCompatActivity() {
         setContentView(R.layout.activity_slide)
         viewPager = findViewById(R.id.viewpager)
         adapter = SlideViewPagerAdapter(this)
+        viewPager!!.adapter = adapter
         if (isOpenAlread) {
             val intent = Intent(this@SlideActivity, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
