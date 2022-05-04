@@ -31,10 +31,10 @@
             android:name=".UpdateProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".profile.SlideActivity"
+            android:name=".ProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".profile.SlideActivity"
             android:exported="true" />
         <activity
             android:name=".UploadActivity"
