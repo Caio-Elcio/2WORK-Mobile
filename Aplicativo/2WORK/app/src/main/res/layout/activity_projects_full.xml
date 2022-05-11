@@ -8,103 +8,109 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="35dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginBottom="5dp"
-                android:background="@color/azulEscuro"></LinearLayout>
+                android:layout_marginBottom="80dp"
+                android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_iconusuariov"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:onClick="perfilProjeto"
+                        android:text="Vinicius Novais"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"></TextView>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:orientation="vertical">
+                    android:background="@drawable/border2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="230dp"
-                            android:layout_height="35dp"
-                            android:drawableStart="@drawable/ic_iconusuariov"
-                            android:drawablePadding="5dp"
-                            android:gravity="center_vertical"
-                            android:hint="Vinicius Novais"
-                            android:onClick="perfilProjeto"
-                            android:textColor="@color/black"
-                            android:textSize="20dp"
-                            android:textStyle="bold"></TextView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:gravity="center_vertical">
 
                         <TextView
                             android:layout_width="262dp"
-                            android:layout_height="35dp"
+                            android:layout_height="wrap_content"
                             android:drawablePadding="10dp"
                             android:gravity="center_vertical"
-                            android:hint="3D MAGIC WORD"
                             android:onClick="perfilProjeto"
+                            android:text="3D MAGIC WORD"
                             android:textColor="@color/black"
                             android:textSize="18dp"
                             android:textStyle="bold"></TextView>
+
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:gravity="center_vertical"
                             android:src="@drawable/btngostei" />
+
                     </LinearLayout>
 
-                    <LinearLayout
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="200dp"
-                            android:src="@drawable/image80" />
-                    </LinearLayout>
-                    =
+                        android:layout_height="200dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/image80" />
+                </LinearLayout>
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginBottom="15dp"
-                        android:background="@color/azulEscuro"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="5dp"
                         android:text="Descrição"
                         android:textColor="@color/black"
                         android:textSize="20dp"
@@ -113,86 +119,163 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Um grupo de entusiastas de relógios iniciou um esforço muito ambicioso para encomendar um relógio construído pelas melhores empresas do mundo."
+                        android:text="Um grupo de entusiastas de relógios iniciou um esforço muito ambicioso para encomendar um relógio construído pelas melhores empresas do mundo.Um grupo de entusiastas de relógios iniciou um esforço muito ambicioso para encomendar um relógio construído pelas melhores empresas do mundo.Um grupo de entusiastas de relógios iniciou um esforço muito ambicioso para encomendar um relógio construído pelas melhores empresas do mundo."
                         android:textColor="@color/black"
                         android:textSize="15dp"
                         android:textStyle="bold"></TextView>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:background="@color/azulEscuro"></LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="start"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="40dp"
-                            android:text="Pesquisa de Mercado"
-                            android:textColor="@color/black"
-                            android:textSize="17dp"
-                            android:textStyle="bold"></TextView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="1) O projeto possui fins lucrativos?"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"
-                            android:textStyle="bold"></TextView>
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start"
-                            android:src="@drawable/pesquisa" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="2) O projeto é patenteado?"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"
-                            android:textStyle="bold"></TextView>
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start"
-                            android:src="@drawable/pesquisa" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="3) Existe uma expectativa de mercado?"
-                            android:textColor="@color/black"
-                            android:textSize="15dp"
-                            android:textStyle="bold"></TextView>
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start"
-                            android:src="@drawable/pesquisa" />
-                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="5dp"
-                android:background="@color/azulEscuro"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="50dp"
+                            android:layout_weight="30"
+                            android:text="1. O projeto possui fins lucrativos?"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioGroup
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioButton1"
+                                android:layout_width="74dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="0"
+                                android:buttonTint="@color/azulEscuro"
+                                android:checked="true"
+                                android:text="Sim" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton2"
+                                android:layout_width="74dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="0"
+                                android:buttonTint="@color/azulEscuro"
+                                android:text="Não" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_weight="30"
+                            android:text="2. O projeto é patenteado?"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioButton3"
+                                android:layout_width="74dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="0"
+                                android:buttonTint="@color/azulEscuro"
+                                android:text="Sim" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton4"
+                                android:layout_width="74dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="0"
+                                android:buttonTint="@color/azulEscuro"
+                                android:checked="true"
+                                android:text="Não" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_weight="30"
+                            android:text="3. Existe uma expectativa de mercado ?"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioButton5"
+                                android:layout_width="74dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="0"
+                                android:buttonTint="@color/azulEscuro"
+                                android:checked="true"
+                                android:text="Sim" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton6"
+                                android:layout_width="74dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="0"
+                                android:buttonTint="@color/azulEscuro"
+                                android:text="Não" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
