@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".FeedActivity">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="35dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,7 +56,7 @@
                     android:background="@drawable/border2"
                     android:gravity="center_vertical"
                     android:orientation="vertical"
-                    android:padding="6dp">
+                    android:paddingHorizontal="15dp">
 
 
                     <LinearLayout
@@ -63,9 +65,8 @@
                         android:gravity="center_vertical">
 
                         <TextView
-                            android:layout_width="262dp"
+                            android:layout_width="220dp"
                             android:layout_height="wrap_content"
-                            android:drawablePadding="10dp"
                             android:gravity="center_vertical"
                             android:onClick="perfilProjeto"
                             android:text="3D MAGIC WORD"
@@ -74,16 +75,22 @@
                             android:textStyle="bold"></TextView>
 
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
+                        <Button
+                            android:layout_width="110dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/azulEscuro"
+                            android:drawableStart="@drawable/ic_iconusuariov"
+                            android:drawablePadding="5dp"
                             android:gravity="center_vertical"
-                            android:src="@drawable/btngostei" />
+                            android:src="@drawable/btngostei"
+                            android:text="Gostei"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
 
                     </LinearLayout>
 
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -91,13 +98,27 @@
                     android:layout_marginTop="5dp"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <com.synnapps.carouselview.CarouselView
+                        android:id="@+id/carouselView"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:layout_marginTop="7dp"
-                        android:src="@drawable/image80" />
-                </LinearLayout>
+                        app:fillColor="#FFFFFFFF"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:pageColor="#00000000"
+                        app:radius="6dp"
+                        app:slideInterval="3000"
+                        app:strokeColor="#FF777777"
+                        app:strokeWidth="1dp" />
 
+
+                    <!--                    <ImageView-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="200dp"-->
+                    <!--                        android:layout_marginTop="7dp"-->
+                    <!--                        android:src="@drawable/image80" />-->
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
