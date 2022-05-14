@@ -9,20 +9,34 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUsuario;
+    @Column(length = 60)
     private String nomeUsuario;
+    @Column(length = 60)
     private String emailUsuario;
+    @Column(length = 60)
     private String senhaUsuario;
+    @Column(length = 10)
     private String dataNascimento;
     @Column(length = 1000)
     private String biografiaUsuario;
     private Double avaliacaoUsuario;
+    @Column(length = 11)
     private String cpfUsuario;
+    @Column(length = 60)
     private String cidadeUsuario;
+    @Column(length = 2)
     private String ufUsuario;
+
+    private Integer quantidadeDeProjetos;
+
+    private Integer quantidadeDeFavoritos;
+    @Column(length = 10)
     private String planoUsuario;
 
     // Construtor
-    public Usuario(Integer idUsuario, String nomeUsuario, String emailUsuario, String senhaUsuario, String dataNascimento, String biografiaUsuario, Double avaliacaoUsuario, String cpfUsuario, String cidadeUsuario, String ufUsuario, String planoUsuario) {
+
+
+    public Usuario(Integer idUsuario, String nomeUsuario, String emailUsuario, String senhaUsuario, String dataNascimento, String biografiaUsuario, Double avaliacaoUsuario, String cpfUsuario, String cidadeUsuario, String ufUsuario, Integer quantidadeDeProjetos, Integer quantidadeDeFavoritos, String planoUsuario) {
         this.idUsuario = idUsuario;
         this.nomeUsuario = nomeUsuario;
         this.emailUsuario = emailUsuario;
@@ -33,6 +47,8 @@ public class Usuario {
         this.cpfUsuario = cpfUsuario;
         this.cidadeUsuario = cidadeUsuario;
         this.ufUsuario = ufUsuario;
+        this.quantidadeDeProjetos = quantidadeDeProjetos;
+        this.quantidadeDeFavoritos = quantidadeDeFavoritos;
         this.planoUsuario = planoUsuario;
     }
 
@@ -43,14 +59,18 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "nomeUsuario='" + nomeUsuario + '\'' +
+                "idUsuario=" + idUsuario +
+                ", nomeUsuario='" + nomeUsuario + '\'' +
+                ", emailUsuario='" + emailUsuario + '\'' +
                 ", senhaUsuario='" + senhaUsuario + '\'' +
-                ", dataNascimento=" + dataNascimento +
+                ", dataNascimento='" + dataNascimento + '\'' +
                 ", biografiaUsuario='" + biografiaUsuario + '\'' +
                 ", avaliacaoUsuario=" + avaliacaoUsuario +
-                ", cpfUsuario=" + cpfUsuario +
+                ", cpfUsuario='" + cpfUsuario + '\'' +
                 ", cidadeUsuario='" + cidadeUsuario + '\'' +
                 ", ufUsuario='" + ufUsuario + '\'' +
+                ", quantidadeDeProjetos=" + quantidadeDeProjetos +
+                ", quantidadeDeFavoritos=" + quantidadeDeFavoritos +
                 ", planoUsuario='" + planoUsuario + '\'' +
                 '}';
     }
@@ -134,6 +154,22 @@ public class Usuario {
 
     public void setUfUsuario(String ufUsuario) {
         this.ufUsuario = ufUsuario;
+    }
+
+    public Integer getQuantidadeDeProjetos() {
+        return quantidadeDeProjetos;
+    }
+
+    public void setQuantidadeDeProjetos(Integer quantidadeDeProjetos) {
+        this.quantidadeDeProjetos = quantidadeDeProjetos;
+    }
+
+    public Integer getQuantidadeDeFavoritos() {
+        return quantidadeDeFavoritos;
+    }
+
+    public void setQuantidadeDeFavoritos(Integer quantidadeDeFavoritos) {
+        this.quantidadeDeFavoritos = quantidadeDeFavoritos;
     }
 
     public String getPlanoUsuario() {
