@@ -13,6 +13,8 @@ public class Usuario {
     private String nomeUsuario;
     @Column(length = 60)
     private String emailUsuario;
+    @Column(length = 11)
+    private String telefoneUsuario;
     @Column(length = 60)
     private String senhaUsuario;
     @Column(length = 10)
@@ -34,12 +36,11 @@ public class Usuario {
     private String planoUsuario;
 
     // Construtor
-
-
-    public Usuario(Integer idUsuario, String nomeUsuario, String emailUsuario, String senhaUsuario, String dataNascimento, String biografiaUsuario, Double avaliacaoUsuario, String cpfUsuario, String cidadeUsuario, String ufUsuario, Integer quantidadeDeProjetos, Integer quantidadeDeFavoritos, String planoUsuario) {
+    public Usuario(Integer idUsuario, String nomeUsuario, String emailUsuario, String telefoneUsuario, String senhaUsuario, String dataNascimento, String biografiaUsuario, Double avaliacaoUsuario, String cpfUsuario, String cidadeUsuario, String ufUsuario, Integer quantidadeDeProjetos, Integer quantidadeDeFavoritos, String planoUsuario) {
         this.idUsuario = idUsuario;
         this.nomeUsuario = nomeUsuario;
         this.emailUsuario = emailUsuario;
+        this.telefoneUsuario = telefoneUsuario;
         this.senhaUsuario = senhaUsuario;
         this.dataNascimento = dataNascimento;
         this.biografiaUsuario = biografiaUsuario;
@@ -62,6 +63,7 @@ public class Usuario {
                 "idUsuario=" + idUsuario +
                 ", nomeUsuario='" + nomeUsuario + '\'' +
                 ", emailUsuario='" + emailUsuario + '\'' +
+                ", telefoneUsuario='" + telefoneUsuario + '\'' +
                 ", senhaUsuario='" + senhaUsuario + '\'' +
                 ", dataNascimento='" + dataNascimento + '\'' +
                 ", biografiaUsuario='" + biografiaUsuario + '\'' +
@@ -98,6 +100,14 @@ public class Usuario {
 
     public void setEmailUsuario(String emailUsuario) {
         this.emailUsuario = emailUsuario;
+    }
+
+    public String getTelefoneUsuario() {
+        return telefoneUsuario;
+    }
+
+    public void setTelefoneUsuario(String telefoneUsuario) {
+        this.telefoneUsuario = telefoneUsuario;
     }
 
     public String getSenhaUsuario() {

@@ -13,7 +13,7 @@ object Validator {
     fun passwordIsFine(password: String?): Boolean {
         return when {
             password.isNullOrEmpty() -> false
-            password.length >= 6 -> false
+            password.length < 6 -> false
             else -> true
         }
     }

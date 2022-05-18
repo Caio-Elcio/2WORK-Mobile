@@ -48,7 +48,6 @@ public class UsuarioController {
     } // Checar os usuarios da nossa lista
 
 
-
     @PostMapping("/cadastrar-usuario") // Cadastrando um usuário
     public ResponseEntity cadastroUsuario(@RequestBody Usuario novoUsuario) { // Está pegando o Body
         novoUsuario.setAvaliacaoUsuario(3.3); // Quando o usuário se cadastra, sua avaliação começa com 0.0
@@ -114,14 +113,14 @@ public class UsuarioController {
         return ResponseEntity.status(200).body(usuario);//Retorna 200 e o body contendo os dados do usuário.
     }
 
-    @GetMapping("/projetos")
-    public List<Projeto> getProjeto(){
+    @GetMapping("/projetos")// Retornar todos os projetos do banco de dados
+    public List<Projeto> getProjetos(){//
         projetos = projetoRepository.findAll();
         return projetos;
     }
 
     @GetMapping("/imagens")
-    public List<Imagem> getImagem(){
+    public List<Imagem> getImagens(){
         imagens = imagemRepository.findAll();
         return imagens;
     }
@@ -139,5 +138,42 @@ public class UsuarioController {
         //pesquisaDeMercadoRepository.save(pesquisaDeMercado);// Está dando o INSERT da pesquisa de mercado
         //imagemRepository.save(imagem);//Está dando o Insert da pesquisa de mercado
         return ResponseEntity.status(201).build();
+    }
+
+    @PatchMapping("/atualizar-dados/{idUsuario}")// Atualiza apenas o nome e o e-mail do usuário
+    public ResponseEntity atualizarDados(@PathVariable Integer idUsuario, @RequestBody Usuario atualizarUsuario){
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(idUsuario);
+        if (usuarioOptional.isEmpty()){
+            return ResponseEntity.status(404).build();
+        }
+        Usuario usuario = usuarioOptional.get();
+        if (!atualizarUsuario.getNomeUsuario().isEmpty()){// Checa se o valor não é apenas vazio "" (NÃO PASSAR NULO PARA CÁ)
+            usuario.setNomeUsuario(atualizarUsuario.getNomeUsuario());
+        }
+        if (!atualizarUsuario.getEmailUsuario().isEmpty()){// Checa se o valor não é apenas vazio "" (NÃO PASSAR NULO PARA CÁ)
+            usuario.setEmailUsuario(atualizarUsuario.getEmailUsuario());
+        }
+        if (!atualizarUsuario.getTelefoneUsuario().isEmpty()){// Checa se o valor não é apenas vazio "" (NÃO PASSAR NULO PARA CÁ)
+            usuario.setTelefoneUsuario(atualizarUsuario.getTelefoneUsuario());
+        }
+        usuarioRepository.save(usuario);
+        return ResponseEntity.status(200).build();
+    }
+
+    @PatchMapping("/trocar-plano-basic/{idUsuario}/{planoUsuario}")// Atualiza apenas o plano do usuário
+    public ResponseEntity atualizarPlano(@PathVariable Integer idUsuario, @PathVariable String planoUsuario){
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(idUsuario);
+        Usuario usuario = usuarioOptional.get();
+        System.out.println(usuario);
+        if (usuarioOptional.isEmpty()){
+            return ResponseEntity.status(404).build();
+        }
+        Usuario usuario2 = usuarioOptional.get();
+        System.out.println(usuario);
+        if (!planoUsuario.isEmpty()){// Se o planoUsuario não vir com ""
+            usuario.setPlanoUsuario(planoUsuario);// Atualize o planoUsuario
+        }
+        usuarioRepository.save(usuario);
+        return ResponseEntity.status(200).build();
     }
 }
