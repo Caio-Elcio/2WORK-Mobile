@@ -1,9 +1,6 @@
 package com.towork.backendaplicacao.controlador;
 
-import com.towork.backendaplicacao.dominio.Imagem;
-import com.towork.backendaplicacao.dominio.PesquisaDeMercado;
-import com.towork.backendaplicacao.dominio.Projeto;
-import com.towork.backendaplicacao.dominio.Usuario;
+import com.towork.backendaplicacao.dominio.*;
 import com.towork.backendaplicacao.repositorio.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -39,6 +36,7 @@ public class UsuarioController {
     // Está criando uma lista, para podermos manipular os dados do Usuário pelo JAVA.
     private List<Usuario> usuarios = new ArrayList<>();
     private List<Projeto> projetos = new ArrayList<>();
+    private List<ProjetosCurtidos> projetosCurtidos = new ArrayList<>();
     private List<Imagem> imagens = new ArrayList<>();
 
     @GetMapping // Comentar esse método no dia da Sprint
@@ -119,6 +117,12 @@ public class UsuarioController {
         return projetos;
     }
 
+    @GetMapping("/projetos-curtidos")// Retornar todos os projetos do banco de dados
+    public List<ProjetosCurtidos> getProjetosCurtidos(){//
+        projetosCurtidos = projetosCurtidosRepository.findAll();
+        return projetosCurtidos;
+    }
+
     @GetMapping("/imagens")
     public List<Imagem> getImagens(){
         imagens = imagemRepository.findAll();
@@ -131,8 +135,8 @@ public class UsuarioController {
             return ResponseEntity.status(404).build();
         }
         Usuario usuario = usuarioOptional.get();
+        usuario.setQuantidadeDeProjetos(usuario.getIdUsuario()+1);
         novoProjeto.setUsuario(usuario);
-        System.out.println(imagemRepository.findByFkProjeto(projetoRepository.findFirstByOrderByIdProjetoDesc().getIdProjeto()+1));
         novoProjeto.setImagem(imagemRepository.findByFkProjeto(projetoRepository.findFirstByOrderByIdProjetoDesc().getIdProjeto()+1));
         projetoRepository.save(novoProjeto);// Está dando o INSERT do projeto
         //pesquisaDeMercadoRepository.save(pesquisaDeMercado);// Está dando o INSERT da pesquisa de mercado
@@ -176,4 +180,75 @@ public class UsuarioController {
         usuarioRepository.save(usuario);
         return ResponseEntity.status(200).build();
     }
+
+    @GetMapping("/retornar-ultimos-projetos")//Traz os últimos projetos
+    public ResponseEntity projetosRecentes(){
+        Boolean notFound = false;
+        Integer contador = 0;
+        List<Projeto> ultimosProjetos = new ArrayList<>();
+        while(contador < 3){
+            Optional<Projeto> projetoOptional = projetoRepository.findById(
+                    projetoRepository.findFirstByOrderByIdProjetoDesc().getIdProjeto()-contador);
+            if (projetoOptional.isEmpty()){
+                contador=3;
+                notFound = true;
+            }else {
+                Projeto projeto = projetoOptional.get();
+                ultimosProjetos.add(projeto);
+                contador++;
+            }
+        }
+        if (notFound){
+            return ResponseEntity.status(404).build();
+        }
+        return ResponseEntity.status(200).body(ultimosProjetos);
+    }
+
+    @GetMapping("/ver-projeto/{idProjeto}")
+    public ResponseEntity verProjeto(@PathVariable Integer idProjeto){
+        Optional<Projeto> projetoOptional = projetoRepository.findById(idProjeto);
+        if(projetoOptional.isEmpty()){
+            return ResponseEntity.status(404).build();
+        }
+        Projeto projeto = projetoOptional.get();
+        return ResponseEntity.status(200).body(projeto);
+    }
+
+    @GetMapping("/ver-usuario/{idUsuario}")
+    public ResponseEntity verUsuario(@PathVariable Integer idUsuario){
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(idUsuario);
+        if(usuarioOptional.isEmpty()){
+            return ResponseEntity.status(404).build();
+        }
+        Usuario usuario = usuarioOptional.get();
+        return ResponseEntity.status(200).body(usuario);
+    }
+
+    @GetMapping("/meus-projetos/{idUsuario}")
+    public ResponseEntity meusProjetos(@PathVariable Integer idUsuario){
+        List<Projeto> meusProjetos = projetoRepository.findByUsuarioIdUsuario(idUsuario);
+        return ResponseEntity.status(200).body(meusProjetos);
+    }
+
+    @PostMapping("/curtir-projeto/{idProjeto}/{idUsuario}")
+    public ResponseEntity curtirProjeto(ProjetosCurtidos projetosCurtidos, @PathVariable Integer idProjeto, @PathVariable Integer idUsuario){
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(idUsuario);
+        Optional<Projeto> projetoOptional = projetoRepository.findById(idProjeto);
+        if (usuarioOptional.isEmpty() || projetoOptional.isEmpty()){
+            return ResponseEntity.status(404).build();
+        }
+        Usuario usuario = usuarioOptional.get();
+        Projeto projeto = projetoOptional.get();
+        projetosCurtidos.setProjeto(projeto);
+        projetosCurtidos.setUsuario(usuario);
+        projetosCurtidosRepository.save(projetosCurtidos);
+        return ResponseEntity.status(201).build();
+    }
+
+    @GetMapping("/meus-projetos-curtidos/{idUsuario}")
+    public ResponseEntity meusProjetosCurtidos (@PathVariable Integer idUsuario){
+        List<ProjetosCurtidos> meusProjetosCurtidos = projetosCurtidosRepository.findByUsuarioIdUsuario(idUsuario);
+        return ResponseEntity.status(200).body(meusProjetosCurtidos);
+    }
+
 }

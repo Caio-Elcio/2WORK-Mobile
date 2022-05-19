@@ -1,17 +1,22 @@
 package com.towork.backendaplicacao.dominio;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+
+import javax.persistence.*;
 
 @Entity
 public class ProjetosCurtidos {//Como fazer com 2 chaves estrangeiras?
 
     //Atributos
+
     @Id
-    private Integer fkUsuario;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idCurtida;
+
     private String dataHoraCurtido;
-    private Integer fkProjeto;
+
+    @ManyToOne
+    private Usuario usuario;
 
     @ManyToOne
     private Projeto projeto;
@@ -21,22 +26,26 @@ public class ProjetosCurtidos {//Como fazer com 2 chaves estrangeiras?
     }
 
     //ToString
+
     @Override
     public String toString() {
         return "ProjetosCurtidos{" +
-                "fkUsuario=" + fkUsuario +
+                "idCurtida=" + idCurtida +
                 ", dataHoraCurtido='" + dataHoraCurtido + '\'' +
-                ", fkProjeto=" + fkProjeto +
+                ", usuario=" + usuario +
+                ", projeto=" + projeto +
                 '}';
     }
 
+
     //Getters e Setters
-    public Integer getFkUsuario() {
-        return fkUsuario;
+
+    public Integer getIdCurtida() {
+        return idCurtida;
     }
 
-    public void setFkUsuario(Integer fkUsuario) {
-        this.fkUsuario = fkUsuario;
+    public void setIdCurtida(Integer idCurtida) {
+        this.idCurtida = idCurtida;
     }
 
     public String getDataHoraCurtido() {
@@ -47,11 +56,19 @@ public class ProjetosCurtidos {//Como fazer com 2 chaves estrangeiras?
         this.dataHoraCurtido = dataHoraCurtido;
     }
 
-    public Integer getFkProjeto() {
-        return fkProjeto;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setFkProjeto(Integer fkProjeto) {
-        this.fkProjeto = fkProjeto;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Projeto getProjeto() {
+        return projeto;
+    }
+
+    public void setProjeto(Projeto projeto) {
+        this.projeto = projeto;
     }
 }
