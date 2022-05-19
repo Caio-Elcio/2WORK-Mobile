@@ -18,7 +18,6 @@ class ProjetoAdapter(val projetos: List<Project>) :
             itemView.findViewById<TextView>(R.id.tvTitle).text = projeto.title
             val imgViewContainer: ImageView = itemView.findViewById(R.id.iv_project)
             Glide.with(itemView).load(projeto.image).into(imgViewContainer)
-
         }
     }
 
@@ -31,7 +30,5 @@ class ProjetoAdapter(val projetos: List<Project>) :
     override fun onBindViewHolder(holder: ProjetoCardHolder, position: Int) {
         holder.bind(projetos[position])
     }
-
     override fun getItemCount(): Int = projetos.size
-
 }

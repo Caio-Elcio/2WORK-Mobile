@@ -32,7 +32,6 @@ class ProjectsListAdapter(
         val project = projects[position]
         holder?.let {
             it.title.text = project.title
-
         }
     }
 

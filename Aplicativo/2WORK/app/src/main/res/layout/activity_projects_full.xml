@@ -6,13 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".FeedActivity">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="35dp">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +32,6 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical">
 
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -46,7 +43,6 @@
                         android:textColor="@color/black"
                         android:textSize="20dp"
                         android:textStyle="bold"></TextView>
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -57,7 +53,6 @@
                     android:gravity="center_vertical"
                     android:orientation="vertical"
                     android:paddingHorizontal="15dp">
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -74,7 +69,6 @@
                             android:textSize="18dp"
                             android:textStyle="bold"></TextView>
 
-
                         <Button
                             android:layout_width="110dp"
                             android:layout_height="40dp"
@@ -87,9 +81,7 @@
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="15dp" />
-
                     </LinearLayout>
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -144,7 +136,6 @@
                         android:textColor="@color/black"
                         android:textSize="15dp"
                         android:textStyle="bold"></TextView>
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -174,7 +165,6 @@
                         android:layout_height="wrap_content">
 
                         <RadioGroup
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
@@ -290,12 +280,8 @@
                                 android:buttonTint="@color/azulEscuro"
                                 android:text="Não" />
                         </RadioGroup>
-
                     </LinearLayout>
-
                 </LinearLayout>
-
-
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
