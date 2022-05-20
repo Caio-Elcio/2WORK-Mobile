@@ -19,4 +19,11 @@ interface UsuarioService {
         @Path("email") email: String,
         @Path("senha") senha: String
     ): Call<Void>
+
+    @GET("/2Work/tela-perfil/{email}/{senha}")
+    fun getIdUsuario(
+        @Path("email") email: String,
+        @Path("senha") senha: String,
+        @Header("Authorization") token: String?
+    ): Call<Usuario>
 }
