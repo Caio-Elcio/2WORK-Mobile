@@ -7,28 +7,42 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.a2work.R
 import com.example.a2work.data.profile.models.Project
+import com.example.a2work.data.profile.models.Projeto
 
-class ProjetoAdapter(val projetos: List<Project>) :
-    RecyclerView.Adapter<ProjetoAdapter.ProjetoCardHolder>() {
+class ProjetoAdapter (
+    val projetos: List<Projeto>,
+    val onClick: (Projeto) -> Unit
+) :RecyclerView.Adapter<ProjetoAdapter.ViewHolder>() {
 
-    inner class ProjetoCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(projeto: Project) {
-            itemView.findViewById<TextView>(R.id.tvTitle).text = projeto.title
+     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        fun bind(projeto: Projeto, onProjectClickListener: (Projeto) -> Unit) {
             val imgViewContainer: ImageView = itemView.findViewById(R.id.iv_project)
-            Glide.with(itemView).load(projeto.image).into(imgViewContainer)
+            Glide.with(itemView)
+                .load(imgViewContainer)
+                .apply(RequestOptions())
+                .into(imgViewContainer)
+
+            itemView.findViewById<TextView>(R.id.tvTitle).text = projeto.tituloProjeto
+
+            itemView.setOnClickListener {
+                onProjectClickListener(projeto)
+            }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProjetoCardHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.layout_item_my_projects, parent, false)
-        return ProjetoCardHolder(view)
+        return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ProjetoCardHolder, position: Int) {
-        holder.bind(projetos[position])
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val projeto = projetos[position]
+        holder.bind(projeto, onClick)
     }
     override fun getItemCount(): Int = projetos.size
 }
