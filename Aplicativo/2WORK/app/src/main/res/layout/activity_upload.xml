@@ -80,7 +80,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <Button
+                android:id="@+id/openGalleryForImage"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="50dp"
@@ -90,8 +91,8 @@
                 android:background="@drawable/custom_input"
                 android:hint="Selecione a imagem"
                 android:inputType="text"
+                android:textColorHint="@color/black"
                 android:paddingLeft="15dp"
-                android:text=""
                 android:textSize="16dp" />
         </LinearLayout>
 
