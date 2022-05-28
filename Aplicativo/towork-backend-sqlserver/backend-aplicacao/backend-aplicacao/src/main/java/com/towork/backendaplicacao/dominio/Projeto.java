@@ -13,6 +13,11 @@ public class Projeto {
     private String tituloProjeto;
     @Column(length = 1000)
     private String descricaoProjeto;
+
+    @Column
+    @Lob
+    private byte[] imagemProjeto;
+
     private String dataHoraProjeto;
     private Integer totalVisualizacoesProjeto;
     private Integer totalCurtidasProjeto;
