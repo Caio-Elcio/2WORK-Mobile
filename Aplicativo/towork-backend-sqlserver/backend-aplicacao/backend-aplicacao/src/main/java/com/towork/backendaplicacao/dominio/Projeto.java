@@ -21,6 +21,10 @@ public class Projeto {
     private Boolean terceiraPergunta;
     private Integer fkUsuario;
 
+    private String nomeUsuario;
+
+    private String primeiraLetraNome;
+
     @ManyToOne
     private Usuario usuario;
 
@@ -32,7 +36,6 @@ public class Projeto {
     }
 
     //ToString
-
 
     @Override
     public String toString() {
@@ -47,12 +50,16 @@ public class Projeto {
                 ", segundaPergunta=" + segundaPergunta +
                 ", terceiraPergunta=" + terceiraPergunta +
                 ", fkUsuario=" + fkUsuario +
+                ", nomeUsuario='" + nomeUsuario + '\'' +
+                ", primeiraLetraNome='" + primeiraLetraNome + '\'' +
                 ", usuario=" + usuario +
                 ", imagem=" + imagem +
                 '}';
     }
 
+
     //Getters e Setters
+
 
     public Integer getIdProjeto() {
         return idProjeto;
@@ -132,6 +139,22 @@ public class Projeto {
 
     public void setFkUsuario(Integer fkUsuario) {
         this.fkUsuario = fkUsuario;
+    }
+
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
+
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    public String getPrimeiraLetraNome() {
+        return primeiraLetraNome;
+    }
+
+    public void setPrimeiraLetraNome(String primeiraLetraNome) {
+        this.primeiraLetraNome = primeiraLetraNome;
     }
 
     public Usuario getUsuario() {

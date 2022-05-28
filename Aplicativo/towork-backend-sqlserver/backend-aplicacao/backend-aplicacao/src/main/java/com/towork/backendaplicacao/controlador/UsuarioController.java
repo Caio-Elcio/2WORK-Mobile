@@ -1,5 +1,7 @@
 package com.towork.backendaplicacao.controlador;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import com.towork.backendaplicacao.dominio.*;
 import com.towork.backendaplicacao.repositorio.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -130,13 +132,18 @@ public class UsuarioController {
     }
     @PostMapping("/postar-projeto/{idUsuario}")// Postando um projeto
     public ResponseEntity postarProjeto(@RequestBody Projeto novoProjeto,@PathVariable Integer idUsuario){
+        DateTimeFormatter dtf4 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
         Optional<Usuario> usuarioOptional = usuarioRepository.findById(idUsuario);
         if (usuarioOptional.isEmpty()){
             return ResponseEntity.status(404).build();
         }
         Usuario usuario = usuarioOptional.get();
         usuario.setQuantidadeDeProjetos(usuario.getIdUsuario()+1);
+        novoProjeto.setDataHoraProjeto(dtf4.format(LocalDateTime.now()));
         novoProjeto.setUsuario(usuario);
+        novoProjeto.setNomeUsuario(usuario.getNomeUsuario());
+        String letra = usuario.getNomeUsuario().substring(0,1);
+        novoProjeto.setPrimeiraLetraNome(letra);
         novoProjeto.setImagem(imagemRepository.findByFkProjeto(projetoRepository.findFirstByOrderByIdProjetoDesc().getIdProjeto()+1));
         projetoRepository.save(novoProjeto);// Está dando o INSERT do projeto
         //pesquisaDeMercadoRepository.save(pesquisaDeMercado);// Está dando o INSERT da pesquisa de mercado

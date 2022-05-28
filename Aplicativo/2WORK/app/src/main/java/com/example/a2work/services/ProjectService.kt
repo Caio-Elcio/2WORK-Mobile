@@ -9,4 +9,7 @@ interface ProjectService {
     @GET("/2Work/projetos")
     fun getProjetos(): Call<List<Projeto>>
 
+    @GET("/2Work/retornar-ultimos-projetos")
+    fun getProjetosRecentes(): Call<List<Projeto>>
+
 }

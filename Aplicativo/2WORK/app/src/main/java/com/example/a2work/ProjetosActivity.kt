@@ -44,7 +44,11 @@ class ProjetosActivity : AppCompatActivity() {
                         val ProjetoView = Projeto(
                             idProjeto = projeto.idProjeto,
                             tituloProjeto = projeto.tituloProjeto,
-                            descricaoProjeto = projeto.descricaoProjeto
+                            descricaoProjeto = projeto.descricaoProjeto,
+                            nomeUsuario = projeto.nomeUsuario,
+                            primeiraLetraNome = projeto.primeiraLetraNome,
+                            dataHoraProjeto = projeto.dataHoraProjeto
+
                         )
                         projetosList.add(ProjetoView)
                     }
