@@ -162,14 +162,15 @@ class UploadActivity : AppCompatActivity() {
             idProjeto = null,
             tituloProjeto = etTitleProject.text.toString(),
             descricaoProjeto = etDescriptionTitle.text.toString(),
+            imagemProjeto = stringImage!!,
             nomeUsuario = null,
             primeiraLetraNome = null,
             dataHoraProjeto = null,
             totalVisualizacoesProjeto = null,
             totalCurtidasProjeto = null,
-            primeiraPergunta = false,
-            segundaPergunta = false,
-            terceiraPergunta = false,
+//            primeiraPergunta = false,
+//            segundaPergunta = false,
+//            terceiraPergunta = false,
             fkUsuario = getIdActiveUser?.toInt()
         )
 
