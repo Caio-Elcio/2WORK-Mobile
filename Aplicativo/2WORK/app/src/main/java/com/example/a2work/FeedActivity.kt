@@ -68,9 +68,9 @@ class FeedActivity : AppCompatActivity() {
                             dataHoraProjeto = projeto.dataHoraProjeto,
                             totalVisualizacoesProjeto = projeto.totalVisualizacoesProjeto,
                             totalCurtidasProjeto = projeto.totalCurtidasProjeto,
-                            primeiraPergunta = projeto.primeiraPergunta,
-                            segundaPergunta = projeto.segundaPergunta,
-                            terceiraPergunta = projeto.terceiraPergunta,
+//                            primeiraPergunta = projeto.primeiraPergunta,
+//                            segundaPergunta = projeto.segundaPergunta,
+//                            terceiraPergunta = projeto.terceiraPergunta,
                             fkUsuario = projeto.fkUsuario
                         )
                         projetosList.add(ProjetoView)
