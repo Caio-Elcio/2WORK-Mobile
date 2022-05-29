@@ -2,8 +2,10 @@ package com.example.a2work
 
 import android.Manifest
 import android.app.Activity
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -19,11 +21,23 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.a2work.adapters.ProjetoAdapter
+import com.example.a2work.data.profile.models.Projeto
+import com.example.a2work.databinding.ActivityUploadBinding
 import com.example.a2work.profile.SlideActivity
+import com.example.a2work.rest.Rest
+import com.example.a2work.services.ProjectService
 import kotlinx.android.synthetic.main.activity_upload.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.ByteArrayOutputStream
 
 class UploadActivity : AppCompatActivity() {
+
+    private val retrofitProjeto = Rest.getInstance().create(ProjectService::class.java)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload)
@@ -50,6 +64,10 @@ class UploadActivity : AppCompatActivity() {
                 }
             }
             true
+        }
+
+        addProject.setOnClickListener {
+            uploadProject()
         }
     }
 
@@ -134,12 +152,52 @@ class UploadActivity : AppCompatActivity() {
         val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
     }
 
-    fun upload(view: View) {
 
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("2WORK")
-        builder.setMessage("Projeto publicado com sucesso!")
-        builder.setPositiveButton("OK", { dialogInterface: DialogInterface, i: Int -> })
-        builder.show()
+    private fun uploadProject(){
+
+        val preferencesId: SharedPreferences = getSharedPreferences("id_user", Context.MODE_PRIVATE)
+        val getIdActiveUser = preferencesId.getString("id_user", "")
+
+        val newProject = Projeto(
+            idProjeto = null,
+            tituloProjeto = etTitleProject.text.toString(),
+            descricaoProjeto = etDescriptionTitle.text.toString(),
+            nomeUsuario = null,
+            primeiraLetraNome = null,
+            dataHoraProjeto = null,
+            totalVisualizacoesProjeto = null,
+            totalCurtidasProjeto = null,
+            primeiraPergunta = false,
+            segundaPergunta = false,
+            terceiraPergunta = false,
+            fkUsuario = getIdActiveUser?.toInt()
+        )
+
+        if (getIdActiveUser != null) {
+            retrofitProjeto.uploadProject(getIdActiveUser, newProject).enqueue(
+                object : Callback<Void>{
+                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                        if (response.isSuccessful) {
+                            val builder = AlertDialog.Builder(baseContext)
+                            builder.setTitle("2WORK")
+                            builder.setMessage("Projeto publicado com sucesso!")
+                            builder.setPositiveButton("OK") { _: DialogInterface, _: Int ->
+                                finish()
+                            }
+                            builder.show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<Void>, t: Throwable) {
+                        Toast.makeText(
+                            baseContext,
+                            "Não deu pra cadastrar um projeto",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+            )
+        }
     }
+
 }
