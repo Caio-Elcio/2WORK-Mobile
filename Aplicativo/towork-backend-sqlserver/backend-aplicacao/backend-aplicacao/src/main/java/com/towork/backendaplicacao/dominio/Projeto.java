@@ -177,4 +177,12 @@ public class Projeto {
     public void setImagem(Imagem imagem) {
         this.imagem = imagem;
     }
+
+    public byte[] getImagemProjeto() {
+        return imagemProjeto;
+    }
+
+    public void setImagemProjeto(byte[] imagemProjeto) {
+        this.imagemProjeto = imagemProjeto;
+    }
 }

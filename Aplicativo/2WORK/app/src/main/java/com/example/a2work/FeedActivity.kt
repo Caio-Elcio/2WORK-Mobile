@@ -62,6 +62,7 @@ class FeedActivity : AppCompatActivity() {
                         val ProjetoView = Projeto(
                             idProjeto = projeto.idProjeto,
                             tituloProjeto = projeto.tituloProjeto,
+                            imagemProjeto = projeto.imagemProjeto,
                             descricaoProjeto = projeto.descricaoProjeto,
                             nomeUsuario = projeto.nomeUsuario,
                             primeiraLetraNome = projeto.primeiraLetraNome,

@@ -3,7 +3,7 @@ package com.example.a2work.data.profile.models
 data class Projeto(
     val idProjeto: Int?,
     val tituloProjeto: String?,
-    val imagemProjeto: String,
+    val imagemProjeto: String?,
     var descricaoProjeto: String?,
     var nomeUsuario: String?,
     var primeiraLetraNome: String?,
