@@ -8,24 +8,22 @@ import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.a2work.R
-import com.example.a2work.data.profile.models.Project
 import com.example.a2work.data.profile.models.Projeto
 import kotlinx.android.synthetic.main.layout_item_my_projects.view.*
 
-class ProjetoAdapter (
+class ProjetoUserAdapter (
     val projetos: List<Projeto>,
     val onClick: (Projeto) -> Unit
-) :RecyclerView.Adapter<ProjetoAdapter.ViewHolder>() {
+) :RecyclerView.Adapter<ProjetoUserAdapter.ViewHolder>() {
 
-     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-         val image = itemView.iv_project
+        val image = itemView.iv_project
         fun bind(projeto: Projeto, onProjectClickListener: (Projeto) -> Unit) {
             val imgViewContainer = R.drawable.capa
             Glide.with(itemView)
@@ -60,4 +58,5 @@ class ProjetoAdapter (
     }
 
     override fun getItemCount(): Int = projetos.size
+
 }

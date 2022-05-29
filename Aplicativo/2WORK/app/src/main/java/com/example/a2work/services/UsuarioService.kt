@@ -26,4 +26,9 @@ interface UsuarioService {
         @Path("senha") senha: String,
         @Header("Authorization") token: String?
     ): Call<Usuario>
+
+    @GET("/2Work/ver-usuario/{idUsuario}")
+    fun getUserById(
+        @Path("idUsuario") idUsuario: Int
+    ): Call<Usuario>
 }

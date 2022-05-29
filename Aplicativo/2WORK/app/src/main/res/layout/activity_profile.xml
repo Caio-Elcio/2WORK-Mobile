@@ -305,6 +305,7 @@
                         app:layout_constraintTop_toBottomOf="@id/layout" />
 
                     <TextView
+                        android:id="@+id/tvCountMyProjects"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
@@ -361,7 +362,7 @@
                     app:layout_constraintTop_toBottomOf="@id/my_list" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/liked_list"
+                    android:id="@+id/rvProjects"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"

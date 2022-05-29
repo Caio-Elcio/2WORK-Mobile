@@ -1,7 +1,9 @@
 package com.example.a2work
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -27,9 +29,19 @@ class SplashActivity : AppCompatActivity() {
         delayedShow(5000)
     }
     private val showPart2Runnable = Runnable {
-        val intent = Intent(baseContext, HomeActivity::class.java)
-        startActivity(intent)
-        supportActionBar?.show()
+        val preferencesId: SharedPreferences = getSharedPreferences("id_user", Context.MODE_PRIVATE)
+        val getIdActiveUser = preferencesId.getString("id_user", "")
+
+        if (getIdActiveUser.isNullOrEmpty()) {
+            val intent = Intent(baseContext, HomeActivity::class.java)
+            startActivity(intent)
+            supportActionBar?.show()
+        } else {
+            val intent = Intent(baseContext, FeedActivity::class.java)
+            startActivity(intent)
+            supportActionBar?.show()
+        }
+
     }
 
     private var isFullscreen: Boolean = false
