@@ -2,6 +2,7 @@ package com.example.a2work.services
 
 import com.example.a2work.data.profile.models.Projeto
 import com.example.a2work.data.profile.models.ProjetosCurtidos
+import com.example.a2work.data.profile.models.Usuario
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -9,6 +10,11 @@ interface ProjectService {
 
     @GET("/2Work/projetos")
     fun getProjetos(): Call<List<Projeto>>
+
+    @GET("/2Work/ver-projeto/{idProjeto}")
+    fun verProjeto(
+        @Path("idProjeto") idProjeto: Int
+    ): Call<Projeto>
 
     @GET("/2Work/retornar-ultimos-projetos")
     fun getProjetosRecentes(): Call<List<Projeto>>
