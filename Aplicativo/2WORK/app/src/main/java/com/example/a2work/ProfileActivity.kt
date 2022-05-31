@@ -83,6 +83,7 @@ class ProfileActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {
                     if (response.isSuccessful) {
                         nome_escrito.text = response.body()?.nomeUsuario.toString()
+                        tvNameUser.text = response.body()?.nomeUsuario.toString()
                         email_escrito.text = response.body()?.emailUsuario.toString()
                         tvFirstLetterName.text = response.body()?.nomeUsuario?.substring(0,1).toString()
                         getProjetos()

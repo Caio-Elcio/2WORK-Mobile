@@ -164,12 +164,14 @@
         <entry key="..\:/Users/joaov/OneDrive/Documentos/verdadeiro2work/2WORKMobile/Aplicativo/2WORK/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/drawable-v24/border3.xml" value="0.1" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/drawable/border.xml" value="0.1925" />
+        <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_cadastro.xml" value="0.25" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_feed.xml" value="0.2" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_profile.xml" value="0.25" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_project_profile.xml" value="0.4" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_projects_full.xml" value="0.264" />
-        <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_projetos.xml" value="0.264" />
+        <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_projetos.xml" value="0.1" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_slide.xml" value="0.25" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/activity_update_profile.xml" value="0.25" />
@@ -178,7 +180,7 @@
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/home.xml" value="0.25" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/layout_item_liked_projects.xml" value="0.25" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/layout_item_my_modal_projects.xml" value="0.25" />
-        <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/layout_item_my_projects.xml" value="0.25" />
+        <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/layout_item_my_projects.xml" value="0.1" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/layout_item_my_projects_recents.xml" value="0.3520408163265306" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/projetos.xml" value="0.25" />
         <entry key="..\:/Users/lucas/Desktop/2WORK-Mobile/Aplicativo/2WORK/app/src/main/res/layout/slide_screen.xml" value="0.25" />

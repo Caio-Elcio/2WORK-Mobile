@@ -1,6 +1,7 @@
 package com.example.a2work
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -8,11 +9,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.a2work.adapters.ProjetoUserAdapter
 import com.example.a2work.data.profile.models.Projeto
 import com.example.a2work.data.profile.models.Usuario
+import com.example.a2work.profile.SlideActivity
 import com.example.a2work.rest.Rest
 import com.example.a2work.services.ProjectService
 import com.example.a2work.services.UsuarioService
+import kotlinx.android.synthetic.main.activity_feed.*
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_project_profile.*
+import kotlinx.android.synthetic.main.activity_project_profile.bottom_navigation_projectprofile
 import kotlinx.android.synthetic.main.activity_project_profile.tvNameUser
 import retrofit2.Call
 import retrofit2.Callback
@@ -28,6 +32,27 @@ class ProjectProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_project_profile)
+
+        bottom_navigation_projectprofile.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navi_home -> {
+                    startActivity(Intent(this, FeedActivity::class.java))
+                }
+                R.id.navi_upload -> {
+                    startActivity(Intent(this, UploadActivity::class.java))
+                }
+                R.id.navi_projeto -> {
+                    startActivity(Intent(this, ProjetosActivity::class.java))
+                }
+                R.id.navi_conta -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                }
+                R.id.navi_planos -> {
+                    startActivity(Intent(this, SlideActivity::class.java))
+                }
+            }
+            true
+        }
 
         idUser = intent.getIntExtra("ID_USER_SELECTED", 0)
 

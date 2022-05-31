@@ -11,8 +11,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.a2work.adapters.ProjetoAdapter
 import com.example.a2work.data.profile.models.Projeto
 import com.example.a2work.databinding.ActivityProjetosBinding
+import com.example.a2work.profile.SlideActivity
 import com.example.a2work.rest.Rest
 import com.example.a2work.services.ProjectService
+import kotlinx.android.synthetic.main.activity_feed.*
+import kotlinx.android.synthetic.main.activity_projetos.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,6 +33,26 @@ class ProjetosActivity : AppCompatActivity() {
         binding = ActivityProjetosBinding.inflate(layoutInflater)
         setContentView(binding.root)
         getProjetos()
+
+        bottom_navigation_projetos.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navi_home -> {
+                    startActivity(Intent(this, UploadActivity::class.java))
+                }
+                R.id.navi_upload -> {
+                    startActivity(Intent(this, UploadActivity::class.java))
+                }
+                R.id.navi_projeto -> {
+                }
+                R.id.navi_conta -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                }
+                R.id.navi_planos -> {
+                    startActivity(Intent(this, SlideActivity::class.java))
+                }
+            }
+            true
+        }
     }
 
 

@@ -27,12 +27,16 @@
                     android:src="@drawable/capa" />
             </LinearLayout>
 
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
-                android:gravity="center"
+                android:gravity="start"
                 android:orientation="vertical">
+
+
 
                 <TextView
                     android:layout_width="wrap_content"

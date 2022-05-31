@@ -31,25 +31,25 @@ class FeedActivity : AppCompatActivity() {
         setContentView(binding.root)
         getProjetos()
 
-//        bottom_navigation_home.setOnNavigationItemSelectedListener { item ->
-//            when (item.itemId) {
-//                R.id.navi_home -> {
-//                }
-//                R.id.navi_upload -> {
-//                    startActivity(Intent(this, UploadActivity::class.java))
-//                }
-//                R.id.navi_projeto -> {
-//                    startActivity(Intent(this, ProjetosActivity::class.java))
-//                }
-//                R.id.navi_conta -> {
-//                    startActivity(Intent(this, ProfileActivity::class.java))
-//                }
-//                R.id.navi_planos -> {
-//                    startActivity(Intent(this, SlideActivity::class.java))
-//                }
-//            }
-//            true
-//        }
+        bottom_navigation_home.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navi_home -> {
+                }
+                R.id.navi_upload -> {
+                    startActivity(Intent(this, UploadActivity::class.java))
+                }
+                R.id.navi_projeto -> {
+                    startActivity(Intent(this, ProjetosActivity::class.java))
+                }
+                R.id.navi_conta -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                }
+                R.id.navi_planos -> {
+                    startActivity(Intent(this, SlideActivity::class.java))
+                }
+            }
+            true
+        }
 
     }
 
@@ -74,6 +74,8 @@ class FeedActivity : AppCompatActivity() {
 //                            terceiraPergunta = projeto.terceiraPergunta,
                             fkUsuario = projeto.fkUsuario
                         )
+
+                        Toast.makeText(baseContext, "Bem vindo " + projeto.nomeUsuario, Toast.LENGTH_LONG).show()
                         projetosList.add(ProjetoView)
                     }
                     binding.recyclerViewProjetosContainer.layoutManager = GridLayoutManager(baseContext, 1)
