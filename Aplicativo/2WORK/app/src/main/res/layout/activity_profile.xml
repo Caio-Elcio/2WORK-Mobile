@@ -68,14 +68,20 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/btnSair">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:src="@drawable/iconeperfil"
+
+                    <TextView
+                        android:id="@+id/tvFirstLetterName"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text="G"
+                        android:textSize="150sp"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent" />
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -97,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Business"
+                    android:text="Basic"
                     android:textColor="@color/gold"
                     android:textSize="24sp"
                     android:textStyle="bold"

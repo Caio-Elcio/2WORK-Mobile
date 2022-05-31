@@ -20,25 +20,20 @@ import kotlinx.android.synthetic.main.layout_item_my_projects.view.*
 
 class ProjetoAdapter (
     val projetos: List<Projeto>,
-    val onClick: (Projeto) -> Unit
+    val projectsId: List<Int>?,
+    private val onItemClickListener: (idProject: Int) -> Unit
 ) :RecyclerView.Adapter<ProjetoAdapter.ViewHolder>() {
 
      class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
          val image = itemView.iv_project
-        fun bind(projeto: Projeto, onProjectClickListener: (Projeto) -> Unit) {
-            val imgViewContainer = R.drawable.capa
-            Glide.with(itemView)
-                .load(imgViewContainer)
-                .apply(RequestOptions())
-                .into(itemView.findViewById(R.id.iv_project))
 
-            itemView.findViewById<TextView>(R.id.tvTitle).text = projeto.tituloProjeto
+         fun onClick(idProject: Int, execute: (idProject: Int) -> Unit){
+             itemView.setOnClickListener {
+                 execute(idProject)
+             }
+         }
 
-            itemView.setOnClickListener {
-                onProjectClickListener(projeto)
-            }
-        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -49,9 +44,12 @@ class ProjetoAdapter (
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val projeto = projetos[position]
-        holder.bind(projeto, onClick)
+        val currentId = projectsId?.get(position)
 
         holder.let {
+
+            it.onClick(currentId!!, onItemClickListener)
+
             val imageBytes = Base64.decode(projeto?.imagemProjeto, Base64.DEFAULT)
             val decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
             val d: Drawable = BitmapDrawable(Bitmap.createBitmap(decodedImage))

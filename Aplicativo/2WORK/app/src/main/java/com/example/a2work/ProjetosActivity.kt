@@ -9,13 +9,10 @@ import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.a2work.adapters.ProjetoAdapter
-import com.example.a2work.data.profile.models.Project
 import com.example.a2work.data.profile.models.Projeto
 import com.example.a2work.databinding.ActivityProjetosBinding
-import com.example.a2work.profile.SlideActivity
 import com.example.a2work.rest.Rest
 import com.example.a2work.services.ProjectService
-import kotlinx.android.synthetic.main.activity_projetos.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,6 +23,7 @@ class ProjetosActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProjetosBinding
     private lateinit var botaoCurtida: LinearLayout
     var contadorCurtida = 0
+    private var listProjectsId: List<Int>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,15 +52,21 @@ class ProjetosActivity : AppCompatActivity() {
 //                            primeiraPergunta = false,
 //                            segundaPergunta = false,
 //                            terceiraPergunta = false,
-                            fkUsuario = null
-
+                            fkUsuario = projeto.fkUsuario
                         )
                         projetosList.add(ProjetoView)
+
+                        listProjectsId = response.body()?.map {
+                            it.idProjeto!!
+                        }
                     }
                     binding.recyclerViewProjetosContainer.layoutManager = GridLayoutManager(baseContext, 3)
-                    binding.recyclerViewProjetosContainer.adapter = ProjetoAdapter(projetosList) {
-                        val intent = Intent(baseContext, ProjectsFull::class.java)
+                    binding.recyclerViewProjetosContainer.adapter = ProjetoAdapter(projetosList, listProjectsId) {
+
+                        val intent = Intent(applicationContext, ProjectsFull::class.java)
+                        intent.putExtra("ID_PROJECT_SELECTED", it)
                         startActivity(intent)
+
                     }
                 } else {
                     Toast.makeText(baseContext, "Nao temos projetos", Toast.LENGTH_LONG).show()

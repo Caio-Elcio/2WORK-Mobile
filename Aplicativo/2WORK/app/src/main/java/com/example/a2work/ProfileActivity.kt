@@ -30,7 +30,6 @@ class ProfileActivity : AppCompatActivity() {
     private val retro = Rest.getInstance().create(UsuarioService::class.java)
     private val retrofitProjeto = Rest.getInstance().create(ProjectService::class.java)
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -85,7 +84,7 @@ class ProfileActivity : AppCompatActivity() {
                     if (response.isSuccessful) {
                         nome_escrito.text = response.body()?.nomeUsuario.toString()
                         email_escrito.text = response.body()?.emailUsuario.toString()
-
+                        tvFirstLetterName.text = response.body()?.nomeUsuario?.substring(0,1).toString()
                         getProjetos()
                     } else {
                         Toast.makeText(

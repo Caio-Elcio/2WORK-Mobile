@@ -21,4 +21,7 @@
     <color name="primary_blue">#08376B</color>
     <color name="btn_cinza">#86878B</color>
     <color name="fundo_border">#fafafa</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+
 </resources>
