@@ -37,7 +37,7 @@ class SplashActivity : AppCompatActivity() {
             startActivity(intent)
             supportActionBar?.show()
         } else {
-            val intent = Intent(baseContext, FeedActivity::class.java)
+            val intent = Intent(baseContext, HomeActivity::class.java)
             startActivity(intent)
             supportActionBar?.show()
         }

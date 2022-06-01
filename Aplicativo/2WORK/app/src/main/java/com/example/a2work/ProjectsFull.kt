@@ -1,6 +1,8 @@
 package com.example.a2work
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -31,7 +33,6 @@ class ProjectsFull : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_projects_full)
         verProjeto()
-        currentIdProject = intent.getIntExtra("ID_PROJECT_SELECTED", 0)
 
         bottom_navigation_projectfull.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -63,8 +64,7 @@ class ProjectsFull : AppCompatActivity() {
     }
 
     private fun verProjeto() {
-        currentIdProject?.let {
-            retro.verProjeto(it)
+            retro.verProjeto(59)
                 .enqueue(object : Callback<Projeto> {
                     override fun onResponse(call: Call<Projeto>, response: Response<Projeto>) {
                         if (response.isSuccessful) {
@@ -97,6 +97,5 @@ class ProjectsFull : AppCompatActivity() {
                     }
 
                 })
-        }
     }
 }

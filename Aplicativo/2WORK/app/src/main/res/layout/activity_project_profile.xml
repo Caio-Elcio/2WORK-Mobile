@@ -26,7 +26,7 @@
                 android:background="@color/azulEscuro" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
@@ -64,17 +64,12 @@
                             android:layout_height="35dp"
                             android:drawablePadding="5dp"
                             android:gravity="center_vertical"
-                            android:hint="Vinicius Novais"
+                            android:hint=""
                             android:onClick="perfilProjeto"
                             android:textColor="@color/black"
                             android:textSize="17sp"
                             android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="15dp"
-                            android:gravity="center_vertical"
-                            android:src="@drawable/estrelasperfil" />
                     </LinearLayout>
 
                     <TextView
@@ -83,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:justificationMode="inter_word"
-                        android:text="Nome completo:   Vinicius Novais Ferrreira"
+                        android:text="Nome completo:"
                         android:textColor="@color/black"
                         android:textSize="15dp"
                         android:textStyle="bold" />
@@ -95,7 +90,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="20dp"
                         android:justificationMode="inter_word"
-                        android:text="Email:   vinicius_novais@gmail.com"
+                        android:text="Email:"
                         android:textColor="@color/black"
                         android:textSize="15dp"
                         android:textStyle="bold" />

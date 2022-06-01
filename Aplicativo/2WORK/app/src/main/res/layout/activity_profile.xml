@@ -28,20 +28,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <Button
-                    android:id="@+id/btnEdit"
-                    android:layout_width="125dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="26dp"
-                    android:background="@drawable/custom_button_radius"
-                    android:onClick="editarPerfil"
-                    android:text="Editar Perfil"
-                    android:textAllCaps="false"
-                    android:textColor="@color/blue"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/btnSair"
@@ -218,8 +204,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:gravity="center_horizontal"
-                android:padding="16dp"
+                android:gravity="start"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layout_infos">
@@ -231,29 +216,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imagem_favoritos"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/pin" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Favoritos:"
-                        android:textColor="@color/strong_grey"
-                        android:textSize="12sp"
-                        app:layout_constraintTop_toBottomOf="@id/layout" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1"
-                        android:textAlignment="center"
-                        android:textColor="@color/blue"
-                        android:textSize="25sp"
-                        android:textStyle="bold"
-                        app:layout_constraintTop_toBottomOf="@id/layout" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -262,52 +225,24 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="50dp"
-                        android:src="@drawable/branding" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Recomendação:"
-                        android:textColor="@color/strong_grey"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@id/layout" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.3"
-                        android:textAlignment="center"
-                        android:textColor="@color/blue"
-                        android:textSize="25sp"
-                        android:textStyle="bold"
-                        app:layout_constraintTop_toBottomOf="@id/layout" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/gerenciamento" />
+                    android:gravity="start"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Meus projetos:"
+                        android:text="Qtde Projetos:"
                         android:textAlignment="center"
                         android:textColor="@color/strong_grey"
-                        android:textSize="12sp"
+                        android:textSize="20dp"
                         app:layout_constraintTop_toBottomOf="@id/layout" />
 
                     <TextView
@@ -317,7 +252,7 @@
                         android:text="1"
                         android:textAlignment="center"
                         android:textColor="@color/blue"
-                        android:textSize="25sp"
+                        android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintTop_toBottomOf="@id/layout" />
                 </LinearLayout>
@@ -342,44 +277,23 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/my_list"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_my_projects"
-                    tools:itemCount="1"
-                    tools:listitem="@layout/layout_item_my_projects" />
 
-                <TextView
-                    android:id="@+id/tv_liked_projects"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="26dp"
-                    android:text="Projetos Curtidos"
-                    android:textColor="@color/blue"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/my_list" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvProjects"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_height="180dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="78dp"
                     android:orientation="horizontal"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_liked_projects"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_my_projects"
                     tools:itemCount="0"
                     tools:listitem="@layout/layout_item_liked_projects" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

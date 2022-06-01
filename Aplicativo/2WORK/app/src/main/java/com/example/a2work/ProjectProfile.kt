@@ -14,7 +14,6 @@ import com.example.a2work.rest.Rest
 import com.example.a2work.services.ProjectService
 import com.example.a2work.services.UsuarioService
 import kotlinx.android.synthetic.main.activity_feed.*
-import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_project_profile.*
 import kotlinx.android.synthetic.main.activity_project_profile.bottom_navigation_projectprofile
 import kotlinx.android.synthetic.main.activity_project_profile.tvNameUser
@@ -115,10 +114,9 @@ class ProjectProfile : AppCompatActivity() {
                                 fkUsuario = projeto.fkUsuario
                             )
                             projetosList.add(projetoView)
-                            tvCountMyProjects.text = projetosList.size.toString()
                         }
-                        rvProjects.layoutManager = GridLayoutManager(baseContext, 3)
-                        rvProjects.adapter = ProjetoUserAdapter(projetosList) {}
+                        my_list.layoutManager = GridLayoutManager(baseContext, 3)
+                        my_list.adapter = ProjetoUserAdapter(projetosList) {}
                     } else {
                         Toast.makeText(baseContext, "Nao temos projetos", Toast.LENGTH_LONG).show()
                     }
